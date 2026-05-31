@@ -1,0 +1,165 @@
+:root {
+  --background: #1b1b1b;
+
+  --surface: #262626;
+
+  --surface-hover: #2f2f2f;
+
+  --border: #3b3b3b;
+
+  --text: #f5f5f5;
+
+  --text-secondary: #b0b0b0;
+
+  --gold: #c79a4a;
+
+  --gold-hover: #b78835;
+
+  --shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.35);
+
+  --radius: 20px;
+
+  --container-width: 1400px;
+}
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+body {
+  background: var(--background);
+
+  color: var(--text);
+
+  font-family:
+    Inter,
+    sans-serif;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+button {
+  border: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+.page-container {
+  width: 100%;
+
+  max-width: var(--container-width);
+
+  margin: 0 auto;
+
+  padding-left: 24px;
+
+  padding-right: 24px;
+}
+
+.card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+.primary-button {
+  background: var(--gold);
+
+  color: white;
+
+  padding: 14px 28px;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.primary-button:hover {
+  background: var(--gold-hover);
+}
+
+.secondary-button {
+  background: transparent;
+
+  border: 1px solid var(--border);
+
+  color: var(--text);
+
+  padding: 14px 28px;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+}
+
+.secondary-button:hover {
+  background: var(--surface-hover);
+}
+
+.text-input {
+  width: 100%;
+
+  padding: 14px 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+
+  background: var(--surface);
+
+  color: var(--text);
+
+  font-size: 15px;
+}
+
+.text-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.text-input:focus {
+  outline: none;
+
+  border-color: var(--gold);
+}
+
+.section-title {
+  font-size: 40px;
+
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+
+  margin-bottom: 32px;
+}

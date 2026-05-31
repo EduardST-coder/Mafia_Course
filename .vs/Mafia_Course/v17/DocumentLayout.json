@@ -1,0 +1,1821 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\getroomplayershandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\getroomplayershandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\roomplayerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\roomplayerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260531155842_AddSeatNumberToRoomPlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Persistence\\Migrations\\20260531155842_AddSeatNumberToRoomPlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\chooseseatendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\chooseseatendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\chooseseathandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\chooseseathandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\chooseseatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\chooseseatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\entities\\roomplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\roomplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\getroomplayersendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\getroomplayersendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\joinroomendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\joinroomendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\joinroomhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\joinroomhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\joinroomrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\joinroomrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\auth\\roomendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\auth\\roomendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA81BD8D-0637-4317-AD96-43421CEAE350}|Infrastructure\\Infrastructure.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\infrastructure\\auth\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA81BD8D-0637-4317-AD96-43421CEAE350}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\auth\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\auth\\login\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\auth\\login\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\createroomhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\createroomhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\getroomsendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\getroomsendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\roomresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\roomresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\getroomshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\getroomshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\auth\\register\\registerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\auth\\register\\registerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\mafia tests\\rooms\\checkgameresulthandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|solutionrelative:mafia tests\\rooms\\checkgameresulthandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\checkgameresulthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\checkgameresulthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\mafia tests\\rooms\\finishvotinghandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|solutionrelative:mafia tests\\rooms\\finishvotinghandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\finishvotinghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\finishvotinghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\mafia tests\\rooms\\createvotehandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|solutionrelative:mafia tests\\rooms\\createvotehandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\mafia tests\\mocks\\gamenotifiermock.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|solutionrelative:mafia tests\\mocks\\gamenotifiermock.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\mafia tests\\testdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|solutionrelative:mafia tests\\testdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\persistence\\context\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|solutionrelative:persistence\\context\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\entities\\vote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\vote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\createvotehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\createvotehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\interfaces\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\habs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\habs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\signalr\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\signalr\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\interfaces\\iconnectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iconnectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\auth\\googleloginendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\auth\\googleloginendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\auth\\googlelogin\\googleloginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\auth\\googlelogin\\googleloginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\auth\\googleloginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\auth\\googleloginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527031527_AddVotingSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Persistence\\Migrations\\20260527031527_AddVotingSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527031257_AddVotingSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Persistence\\Migrations\\20260527031257_AddVotingSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\signalr\\gamenotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\signalr\\gamenotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\checkgameresultendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\checkgameresultendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\getgamestateendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\getgamestateendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\getroleendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\getroleendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\finishrevoteendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\finishrevoteendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\finishvotingendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\finishvotingendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\createrevoteendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\createrevoteendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\createvoteendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\createvoteendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\doncheckendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\doncheckendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\sheriffcheckendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\sheriffcheckendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\mafiakillendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\mafiakillendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\nextphaseendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\nextphaseendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\startgameendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\startgameendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\rooms\\leaveroomendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\rooms\\leaveroomendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\extensions\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\extensions\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\createrevotehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\createrevotehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\finishrevotehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\finishrevotehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\mafiakillhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\mafiakillhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\nextphasehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\nextphasehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\startgamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\startgamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\interfaces\\igamenotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\interfaces\\igamenotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\getgamestatehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\getgamestatehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\gameplayerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\gameplayerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\gamestateresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\gamestateresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\finishrevoterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\finishrevoterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\createrevoterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\createrevoterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\finishvotingresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\finishvotingresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\finishvotingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\finishvotingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\createvoterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\createvoterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\gameresultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\gameresultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\enums\\gameresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\gameresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\doncheckhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\doncheckhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\doncheckresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\doncheckresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\doncheckrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\doncheckrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\features\\rooms\\sheriffcheckhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\features\\rooms\\sheriffcheckhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\sheriffcheckresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\sheriffcheckresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\sheriffcheckrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\sheriffcheckrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\mafiakillrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\mafiakillrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\nextphaserequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\nextphaserequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\enums\\gamephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\gamephase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\roomlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\roomlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\persistence\\migrations\\20260524073902_updateroomfields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|solutionrelative:persistence\\migrations\\20260524073902_updateroomfields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\persistence\\context\\dbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|solutionrelative:persistence\\context\\dbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\rooms\\createroomrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\rooms\\createroomrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\persistence\\migrations\\20260520000346_addrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|solutionrelative:persistence\\migrations\\20260520000346_addrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\enums\\roomstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\roomstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|solutionrelative:persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\auth\\loginendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\auth\\loginendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\endpo1nts\\auth\\registerendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\endpo1nts\\auth\\registerendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA81BD8D-0637-4317-AD96-43421CEAE350}|Infrastructure\\Infrastructure.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\infrastructure\\auth\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA81BD8D-0637-4317-AD96-43421CEAE350}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\auth\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\interfaces\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\interfaces\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\auth\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\auth\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\dtos\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\dtos\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\persistence\\persistence.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|solutionrelative:persistence\\persistence.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA81BD8D-0637-4317-AD96-43421CEAE350}|Infrastructure\\Infrastructure.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\infrastructure\\infrastructure.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{BA81BD8D-0637-4317-AD96-43421CEAE350}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\domain\\domain.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{239C2987-EAB0-41B4-B8DA-82A2386B5F72}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\application.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\extensions\\databaseextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\extensions\\databaseextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|solutionrelative:persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\persistence\\migrations\\20260527032019_addvotingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD71A64A-2375-4EE8-AE8A-5B936CA6074A}|Persistence\\Persistence.csproj|solutionrelative:persistence\\migrations\\20260527032019_addvotingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\mafia tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C2155C-6A28-4521-9C8D-95F404405E97}|Mafia Tests\\Mafia.Tests.csproj|solutionrelative:mafia tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 359,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 65,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20260531155842_AddSeatNumberToRoomPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260531155842_AddSeatNumberToRoomPlayer.cs",
+              "RelativeDocumentMoniker": "Persistence\\Migrations\\20260531155842_AddSeatNumberToRoomPlayer.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260531155842_AddSeatNumberToRoomPlayer.cs",
+              "RelativeToolTip": "Persistence\\Migrations\\20260531155842_AddSeatNumberToRoomPlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T15:58:42.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChooseSeatEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\ChooseSeatEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\ChooseSeatEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\ChooseSeatEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\ChooseSeatEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T15:40:56.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChooseSeatHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\ChooseSeatHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\ChooseSeatHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\ChooseSeatHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\ChooseSeatHandler.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T15:39:22.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChooseSeatRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\ChooseSeatRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\ChooseSeatRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\ChooseSeatRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\ChooseSeatRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T15:38:20.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CheckGameResultHandlerTests.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Rooms\\CheckGameResultHandlerTests.cs",
+              "RelativeDocumentMoniker": "Mafia Tests\\Rooms\\CheckGameResultHandlerTests.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Rooms\\CheckGameResultHandlerTests.cs",
+              "RelativeToolTip": "Mafia Tests\\Rooms\\CheckGameResultHandlerTests.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAqwM8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T07:50:30.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FinishVotingHandlerTests.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Rooms\\FinishVotingHandlerTests.cs",
+              "RelativeDocumentMoniker": "Mafia Tests\\Rooms\\FinishVotingHandlerTests.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Rooms\\FinishVotingHandlerTests.cs",
+              "RelativeToolTip": "Mafia Tests\\Rooms\\FinishVotingHandlerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T07:47:42.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TestDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\TestDbContext.cs",
+              "RelativeDocumentMoniker": "Mafia Tests\\TestDbContext.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\TestDbContext.cs",
+              "RelativeToolTip": "Mafia Tests\\TestDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T07:32:45.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CreateVoteHandlerTests.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Rooms\\CreateVoteHandlerTests.cs",
+              "RelativeDocumentMoniker": "Mafia Tests\\Rooms\\CreateVoteHandlerTests.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Rooms\\CreateVoteHandlerTests.cs",
+              "RelativeToolTip": "Mafia Tests\\Rooms\\CreateVoteHandlerTests.cs",
+              "ViewState": "AgIAADEBAAAAAAAAAAAcwDsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T07:31:02.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GameNotifierMock.cs.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Mocks\\GameNotifierMock.cs.cs",
+              "RelativeDocumentMoniker": "Mafia Tests\\Mocks\\GameNotifierMock.cs.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Mocks\\GameNotifierMock.cs.cs",
+              "RelativeToolTip": "Mafia Tests\\Mocks\\GameNotifierMock.cs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T07:29:38.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 109,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "Mafia Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\UnitTest1.cs",
+              "RelativeToolTip": "Mafia Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T07:21:41.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ConnectionManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\SignalR\\ConnectionManager.cs",
+              "RelativeDocumentMoniker": "Aplication\\SignalR\\ConnectionManager.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\SignalR\\ConnectionManager.cs",
+              "RelativeToolTip": "Aplication\\SignalR\\ConnectionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T07:13:47.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IConnectionManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IConnectionManager.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IConnectionManager.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IConnectionManager.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IConnectionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T07:13:10.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "GoogleLoginEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\GoogleLoginEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\GoogleLoginEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\GoogleLoginEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Auth\\GoogleLoginEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:25:22.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "GoogleLoginHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\GoogleLogin\\GoogleLoginHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Auth\\GoogleLogin\\GoogleLoginHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\GoogleLogin\\GoogleLoginHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Auth\\GoogleLogin\\GoogleLoginHandler.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAmwE0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:20:40.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "GoogleLoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\GoogleLoginRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Auth\\GoogleLoginRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\GoogleLoginRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Auth\\GoogleLoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T04:18:05.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 108,
+              "Title": "20260527032019_AddVotingSystem.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527032019_AddVotingSystem.cs",
+              "RelativeDocumentMoniker": "Persistence\\Migrations\\20260527032019_AddVotingSystem.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527032019_AddVotingSystem.cs",
+              "RelativeToolTip": "Persistence\\Migrations\\20260527032019_AddVotingSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T03:20:19.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "20260527031527_AddVotingSystem.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527031527_AddVotingSystem.cs",
+              "RelativeDocumentMoniker": "Persistence\\Migrations\\20260527031527_AddVotingSystem.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527031527_AddVotingSystem.cs",
+              "RelativeToolTip": "Persistence\\Migrations\\20260527031527_AddVotingSystem.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T03:15:27.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "20260527031257_AddVotingSystem.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527031257_AddVotingSystem.cs",
+              "RelativeDocumentMoniker": "Persistence\\Migrations\\20260527031257_AddVotingSystem.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527031257_AddVotingSystem.cs",
+              "RelativeToolTip": "Persistence\\Migrations\\20260527031257_AddVotingSystem.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T03:12:57.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "GetRoleEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetRoleEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\GetRoleEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetRoleEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\GetRoleEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T01:13:42.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "StartGameEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\StartGameEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\StartGameEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\StartGameEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\StartGameEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T01:08:07.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "LeaveRoomEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\LeaveRoomEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\LeaveRoomEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\LeaveRoomEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\LeaveRoomEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T01:06:02.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ClaimsPrincipalExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Extensions\\ClaimsPrincipalExtensions.cs",
+              "RelativeDocumentMoniker": "Aplication\\Extensions\\ClaimsPrincipalExtensions.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Extensions\\ClaimsPrincipalExtensions.cs",
+              "RelativeToolTip": "Aplication\\Extensions\\ClaimsPrincipalExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T01:00:45.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "StartGameHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\StartGameHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\StartGameHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\StartGameHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\StartGameHandler.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAcwFgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:27:43.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "GameNotifier.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\SignalR\\GameNotifier.cs",
+              "RelativeDocumentMoniker": "Aplication\\SignalR\\GameNotifier.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\SignalR\\GameNotifier.cs",
+              "RelativeToolTip": "Aplication\\SignalR\\GameNotifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:06:19.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "IGameNotifier.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IGameNotifier.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IGameNotifier.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IGameNotifier.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IGameNotifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:00:25.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GameHub.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Habs\\GameHub.cs",
+              "RelativeDocumentMoniker": "Aplication\\Habs\\GameHub.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Habs\\GameHub.cs",
+              "RelativeToolTip": "Aplication\\Habs\\GameHub.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAmwHcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T01:08:16.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "GetGameStateEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetGameStateEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\GetGameStateEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetGameStateEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\GetGameStateEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:57:07.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "GetGameStateHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\GetGameStateHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\GetGameStateHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\GetGameStateHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\GetGameStateHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:56:28.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "GamePlayerResponse.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\GamePlayerResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\GamePlayerResponse.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\GamePlayerResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\GamePlayerResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:55:39.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "GameStateResponse.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\GameStateResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\GameStateResponse.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\GameStateResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\GameStateResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:55:06.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "FinishRevoteEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\FinishRevoteEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\FinishRevoteEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\FinishRevoteEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\FinishRevoteEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:47:45.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "FinishRevoteHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\FinishRevoteHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\FinishRevoteHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\FinishRevoteHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\FinishRevoteHandler.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwIcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:47:13.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "FinishRevoteRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\FinishRevoteRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\FinishRevoteRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\FinishRevoteRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\FinishRevoteRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:46:39.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "CreateRevoteEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\CreateRevoteEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\CreateRevoteEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\CreateRevoteEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\CreateRevoteEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:44:00.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "CreateRevoteHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\CreateRevoteHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\CreateRevoteHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\CreateRevoteHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\CreateRevoteHandler.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:43:25.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "CreateRevoteRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateRevoteRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\CreateRevoteRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateRevoteRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\CreateRevoteRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:42:53.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "FinishVotingEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\FinishVotingEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\FinishVotingEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\FinishVotingEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\FinishVotingEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:18:07.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FinishVotingHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\FinishVotingHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\FinishVotingHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\FinishVotingHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\FinishVotingHandler.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAcwHsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:17:36.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "FinishVotingResponse.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\FinishVotingResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\FinishVotingResponse.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\FinishVotingResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\FinishVotingResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:17:12.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "FinishVotingRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\FinishVotingRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\FinishVotingRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\FinishVotingRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\FinishVotingRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:16:42.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "CreateVoteEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\CreateVoteEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\CreateVoteEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\CreateVoteEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\CreateVoteEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:14:48.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreateVoteHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\CreateVoteHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\CreateVoteHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\CreateVoteHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\CreateVoteHandler.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAcwGoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:14:14.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "CreateVoteRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateVoteRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\CreateVoteRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateVoteRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\CreateVoteRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:13:48.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Vote.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\Vote.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Vote.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\Vote.cs",
+              "RelativeToolTip": "Domain\\Entities\\Vote.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:10:07.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CheckGameResultEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\CheckGameResultEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\CheckGameResultEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\CheckGameResultEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\CheckGameResultEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:06:26.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CheckGameResultHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\CheckGameResultHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\CheckGameResultHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\CheckGameResultHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\CheckGameResultHandler.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAcwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:05:47.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "GameResultResponse.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\GameResultResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\GameResultResponse.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\GameResultResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\GameResultResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:05:16.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "GameResult.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\GameResult.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\GameResult.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\GameResult.cs",
+              "RelativeToolTip": "Domain\\Enums\\GameResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:04:41.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "DonCheckEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\DonCheckEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\DonCheckEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\DonCheckEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\DonCheckEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:01:09.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "DonCheckHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\DonCheckHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\DonCheckHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\DonCheckHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\DonCheckHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:00:35.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "DonCheckResponse.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\DonCheckResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\DonCheckResponse.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\DonCheckResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\DonCheckResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T00:00:05.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "DonCheckRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\DonCheckRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\DonCheckRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\DonCheckRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\DonCheckRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:59:21.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "SheriffCheckEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\SheriffCheckEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\SheriffCheckEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\SheriffCheckEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\SheriffCheckEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:56:47.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "SheriffCheckHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\SheriffCheckHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\SheriffCheckHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\SheriffCheckHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\SheriffCheckHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:56:09.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "SheriffCheckResponse.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\SheriffCheckResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\SheriffCheckResponse.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\SheriffCheckResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\SheriffCheckResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:55:31.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "SheriffCheckRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\SheriffCheckRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\SheriffCheckRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\SheriffCheckRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\SheriffCheckRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:54:44.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "MafiaKillEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\MafiaKillEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\MafiaKillEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\MafiaKillEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\MafiaKillEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:53:10.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "MafiaKillHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\MafiaKillHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\MafiaKillHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\MafiaKillHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\MafiaKillHandler.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAcwF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:52:26.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "MafiaKillRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\MafiaKillRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\MafiaKillRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\MafiaKillRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\MafiaKillRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:51:56.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "NextPhaseEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\NextPhaseEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\NextPhaseEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\NextPhaseEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\NextPhaseEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:12:30.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "NextPhaseHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\NextPhaseHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\NextPhaseHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\NextPhaseHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\NextPhaseHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:11:54.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "NextPhaseRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\NextPhaseRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\NextPhaseRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\NextPhaseRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\NextPhaseRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:11:19.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "GamePhase.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\GamePhase.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\GamePhase.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\GamePhase.cs",
+              "RelativeToolTip": "Domain\\Enums\\GamePhase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:09:43.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetRoomPlayersEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetRoomPlayersEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\GetRoomPlayersEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetRoomPlayersEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\GetRoomPlayersEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:07:45.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetRoomPlayersHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\GetRoomPlayersHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\GetRoomPlayersHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\GetRoomPlayersHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\GetRoomPlayersHandler.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAmwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:07:02.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RoomPlayerResponse.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\RoomPlayerResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\RoomPlayerResponse.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\RoomPlayerResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\RoomPlayerResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T23:06:16.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GetRoomsEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetRoomsEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\GetRoomsEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetRoomsEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\GetRoomsEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T08:34:47.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GetRoomsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\GetRoomsHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\GetRoomsHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\GetRoomsHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\GetRoomsHandler.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T08:34:05.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "RoomListItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\RoomListItemDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\RoomListItemDto.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\RoomListItemDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\RoomListItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T08:33:20.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "Application.csproj",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Application.csproj",
+              "RelativeDocumentMoniker": "Application\\Application.csproj",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Application.csproj",
+              "RelativeToolTip": "Application\\Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-24T08:24:18.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JoinRoomEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\JoinRoomEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\JoinRoomEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\JoinRoomEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Rooms\\JoinRoomEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T08:19:38.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "JoinRoomHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\JoinRoomHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Rooms\\JoinRoomHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\JoinRoomHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Rooms\\JoinRoomHandler.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T08:18:15.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JoinRoomRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\JoinRoomRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\JoinRoomRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\JoinRoomRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\JoinRoomRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T08:17:25.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "20260524073902_UpdateRoomFields.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260524073902_UpdateRoomFields.cs",
+              "RelativeDocumentMoniker": "Persistence\\Migrations\\20260524073902_UpdateRoomFields.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260524073902_UpdateRoomFields.cs",
+              "RelativeToolTip": "Persistence\\Migrations\\20260524073902_UpdateRoomFields.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T07:39:40.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RoomEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\RoomEndpoints.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\RoomEndpoints.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\RoomEndpoints.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Auth\\RoomEndpoints.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwCoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T07:31:42.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IAppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IAppDbContext.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IAppDbContext.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IAppDbContext.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IAppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T07:24:08.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateRoomHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateRoomHandler.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\CreateRoomHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateRoomHandler.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\CreateRoomHandler.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T07:17:40.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RoomResponse.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\RoomResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\RoomResponse.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\RoomResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\RoomResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T07:17:21.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "CreateRoomRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateRoomRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\CreateRoomRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateRoomRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Rooms\\CreateRoomRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T07:17:05.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "20260520000346_AddRooms.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260520000346_AddRooms.cs",
+              "RelativeDocumentMoniker": "Persistence\\Migrations\\20260520000346_AddRooms.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260520000346_AddRooms.cs",
+              "RelativeToolTip": "Persistence\\Migrations\\20260520000346_AddRooms.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T00:04:06.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RoomPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\RoomPlayer.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\RoomPlayer.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\RoomPlayer.cs",
+              "RelativeToolTip": "Domain\\Entities\\RoomPlayer.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T23:48:05.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\Room.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Room.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\Room.cs",
+              "RelativeToolTip": "Domain\\Entities\\Room.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAADwv20AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T23:47:37.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "RoomStatus.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\RoomStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\RoomStatus.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\RoomStatus.cs",
+              "RelativeToolTip": "Domain\\Enums\\RoomStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T23:47:09.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "LoginEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\LoginEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\LoginEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\LoginEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Auth\\LoginEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T23:15:40.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "RegisterEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\RegisterEndpoint.cs",
+              "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\RegisterEndpoint.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\RegisterEndpoint.cs",
+              "RelativeToolTip": "Aplication\\Endpo1nts\\Auth\\RegisterEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T23:15:03.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\Login\\LoginHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Auth\\Login\\LoginHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\Login\\LoginHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Auth\\Login\\LoginHandler.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T23:13:01.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RegisterHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\Register\\RegisterHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Auth\\Register\\RegisterHandler.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\Register\\RegisterHandler.cs",
+              "RelativeToolTip": "Application\\Features\\Auth\\Register\\RegisterHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T23:12:18.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAIBQwCMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T23:06:31.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "JwtProvider.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Infrastructure\\Auth\\JwtProvider.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Auth\\JwtProvider.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Infrastructure\\Auth\\JwtProvider.cs",
+              "RelativeToolTip": "Infrastructure\\Auth\\JwtProvider.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T22:58:04.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Infrastructure\\Auth\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Auth\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Infrastructure\\Auth\\PasswordHasher.cs",
+              "RelativeToolTip": "Infrastructure\\Auth\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T22:57:29.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "IJwtProvider.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IJwtProvider.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IJwtProvider.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IJwtProvider.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IJwtProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T22:55:28.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "IPasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IPasswordHasher.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IPasswordHasher.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IPasswordHasher.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IPasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T22:54:59.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T22:54:29.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Auth\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\AuthResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\Auth\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T22:53:52.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Auth\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\LoginRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Auth\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T22:53:20.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Auth\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\RegisterRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\Auth\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T22:52:41.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\UserRole.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\UserRole.cs",
+              "RelativeToolTip": "Domain\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T22:31:36.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "DbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Context\\DbContextFactory.cs",
+              "RelativeDocumentMoniker": "Persistence\\Context\\DbContextFactory.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Context\\DbContextFactory.cs",
+              "RelativeToolTip": "Persistence\\Context\\DbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T00:25:22.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "API.csproj",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\API.csproj",
+              "RelativeDocumentMoniker": "Aplication\\API.csproj",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\API.csproj",
+              "RelativeToolTip": "Aplication\\API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAWwCEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T23:29:30.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "Persistence",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Persistence.csproj",
+              "RelativeDocumentMoniker": "Persistence\\Persistence.csproj",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Persistence.csproj",
+              "RelativeToolTip": "Persistence\\Persistence.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T23:23:46.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "Infrastructure",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Infrastructure\\Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Infrastructure\\Infrastructure.csproj",
+              "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T23:23:30.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "Domain",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Domain.csproj",
+              "RelativeToolTip": "Domain\\Domain.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T23:23:14.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "Application",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Application.csproj",
+              "RelativeDocumentMoniker": "Application\\Application.csproj",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Application.csproj",
+              "RelativeToolTip": "Application\\Application.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T23:21:35.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Program.cs",
+              "RelativeDocumentMoniker": "Aplication\\Program.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Program.cs",
+              "RelativeToolTip": "Aplication\\Program.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAwwOwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T23:09:23.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 106,
+              "Title": "DatabaseExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Extensions\\DatabaseExtensions.cs",
+              "RelativeDocumentMoniker": "Aplication\\Extensions\\DatabaseExtensions.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Extensions\\DatabaseExtensions.cs",
+              "RelativeToolTip": "Aplication\\Extensions\\DatabaseExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T23:08:58.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\appsettings.json",
+              "RelativeDocumentMoniker": "Aplication\\appsettings.json",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\appsettings.json",
+              "RelativeToolTip": "Aplication\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-18T23:06:38.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 107,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "Persistence\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "Persistence\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T23:05:36.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Context\\DbContext.cs",
+              "RelativeDocumentMoniker": "Persistence\\Context\\DbContext.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Context\\DbContext.cs",
+              "RelativeToolTip": "Persistence\\Context\\DbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA5wCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T23:03:33.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T23:00:40.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T22:59:51.219Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

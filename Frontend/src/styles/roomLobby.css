@@ -1,0 +1,121 @@
+.room-page {
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+}
+
+.table-layout {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.table-logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.seat {
+  width: 180px;
+}
+
+.seat-video {
+  height: 110px;
+  background: #222;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.seat-name {
+  color: white;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.seat-number {
+  color: white;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.seat-10 {
+  position: absolute;
+  top: 30px;
+  left: 25%;
+}
+
+.seat-1 {
+  position: absolute;
+  top: 30px;
+  right: 25%;
+}
+
+.seat-2 {
+  position: absolute;
+  top: 180px;
+  right: 10%;
+}
+
+.seat-3 {
+  position: absolute;
+  top: 340px;
+  right: 10%;
+}
+
+.seat-4 {
+  position: absolute;
+  top: 500px;
+  right: 10%;
+}
+
+.seat-5 {
+  position: absolute;
+  bottom: 40px;
+  right: 25%;
+}
+
+.seat-6 {
+  position: absolute;
+  bottom: 40px;
+  left: 40%;
+}
+
+.seat-7 {
+  position: absolute;
+  top: 500px;
+  left: 10%;
+}
+
+.seat-8 {
+  position: absolute;
+  top: 340px;
+  left: 10%;
+}
+
+.seat-9 {
+  position: absolute;
+  top: 180px;
+  left: 10%;
+}
+
+.host-info {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+
+  color: white;
+  font-size: 18px;
+}

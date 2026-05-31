@@ -1,0 +1,93 @@
+.rooms-page {
+  min-height: 100vh;
+  background: #111;
+  color: white;
+  padding: 40px;
+}
+
+.rooms-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.rooms-subtitle {
+  text-align: center;
+  opacity: .7;
+  margin-bottom: 40px;
+}
+
+.rooms-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    );
+
+  gap: 24px;
+}
+
+.table-card {
+  background: #1c1c1c;
+
+  border: 1px solid #2c2c2c;
+
+  border-radius: 16px;
+
+  padding: 24px;
+
+  transition: .2s;
+}
+
+.table-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #444;
+}
+
+.table-header {
+  font-size: 22px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.table-players {
+  font-size: 32px;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+.table-status {
+  opacity: .7;
+
+  margin-bottom: 20px;
+}
+
+.table-button {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 12px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+.table-button:disabled {
+  cursor: not-allowed;
+
+  opacity: .5;
+}

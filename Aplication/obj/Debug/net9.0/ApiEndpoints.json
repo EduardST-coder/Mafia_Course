@@ -1,0 +1,474 @@
+[
+  {
+    "ContainingType": "API.Endpoints.Auth.GoogleLoginEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGoogleLoginEndpoint\u003Eb__0_0",
+    "RelativePath": "auth/google",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Auth.GoogleLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Auth.LoginEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapLoginEndpoint\u003Eb__0_0",
+    "RelativePath": "auth/login",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Auth.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Auth.RegisterEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRegisterEndpoint\u003Eb__0_0",
+    "RelativePath": "auth/register",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Auth.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.RoomEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCreateRoomEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.CreateRoomRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.GetRoomsEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGetRoomsEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.GetRoomPlayersEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGetRoomPlayersEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/{roomId}/players",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.CheckGameResultEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCheckGameResultEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/{roomId}/result",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.GetGameStateEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGetGameStateEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/{roomId}/state",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.DonCheckEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDonCheckEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/don-check",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.DonCheckRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.FinishRevoteEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFinishRevoteEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/finish-revote",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.FinishRevoteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.FinishVotingEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFinishVotingEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/finish-voting",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.FinishVotingRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.JoinRoomEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapJoinRoomEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/join",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.JoinRoomRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.LeaveRoomEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapLeaveRoomEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/leave",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.LeaveRoomRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.MafiaKillEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapMafiaKillEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/mafia-kill",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.MafiaKillRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.NextPhaseEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapNextPhaseEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/next-phase",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.NextPhaseRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.CreateRevoteEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCreateRevoteEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/revote",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.CreateRevoteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.GetRoleEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGetRoleEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/role",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.GetRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.ChooseSeatEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapChooseSeatEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/seat",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.ChooseSeatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.SheriffCheckEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSheriffCheckEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/sheriff-check",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.SheriffCheckRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.StartGameEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapStartGameEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/start",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.StartGameRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.CreateVoteEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapCreateVoteEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/vote",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.CreateVoteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Users.GetUsersEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGetUsersEndpoint\u003Eb__0_0",
+    "RelativePath": "users",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

@@ -8,24 +8,28 @@ import {
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import DashboardPage from "../pages/DashboardPage";
-import RoomsPage from "../pages/RoomsPage";
 import RoomLobbyPage from "../pages/RoomLobbyPage";
 
 import MainLayout from "../layouts/MainLayout";
+import GoogleCallbackPage from "../pages/GoogleCallbackPage";
 
 export default function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
 
+        {/* Публічні маршрути */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+
+        {/* Головна сторінка — тут і столи, і все інше */}
         <Route
           path="/"
-          element={<LoginPage />}
-        />
-
-        <Route
-          path="/register"
-          element={<RegisterPage />}
+          element={
+            <MainLayout>
+              <DashboardPage />
+            </MainLayout>
+          }
         />
 
         <Route
@@ -37,15 +41,7 @@ export default function AppRouter() {
           }
         />
 
-        <Route
-          path="/rooms"
-          element={
-            <MainLayout>
-              <RoomsPage />
-            </MainLayout>
-          }
-        />
-
+        {/* Кімната — за ID */}
         <Route
           path="/rooms/:roomId"
           element={
@@ -55,15 +51,9 @@ export default function AppRouter() {
           }
         />
 
-        <Route
-          path="*"
-          element={
-            <Navigate
-              to="/dashboard"
-              replace
-            />
-          }
-        />
+        {/* Редирект невідомих шляхів */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/auth/google/callback" element={<GoogleCallbackPage />} />
 
       </Routes>
     </BrowserRouter>

@@ -1,90 +1,56 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import Breadcrumbs from "./Breadcrumbs";
 
 export default function Header() {
+  const { user, isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
+
   return (
-    <header
-      style={{
-        background: "#ffffff",
-        borderBottom:
-          "1px solid var(--border)"
-      }}
-    >
-      <div
-        className="page-container"
-        style={{
-          height: "80px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent:
-            "space-between"
-        }}
-      >
-        <Link
-          to="/dashboard"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "12px"
-          }}
-        >
-          <div
-            style={{
-              fontSize: "32px"
-            }}
-          >
-            🎩
-          </div>
-
-          <div>
-            <div
-              style={{
-                fontSize: "28px",
-                fontWeight: 700
-              }}
-            >
-              MAFIA
-            </div>
-
-            <div
-              style={{
-                color:
-                  "var(--text-secondary)",
-                fontSize: "12px"
-              }}
-            >
-              ONLINE
-            </div>
+    <header className="header">
+      <div className="page-container header-container">
+        {/* Логотип */}
+        <Link to="/dashboard" className="header-logo">
+          <span className="header-logo-icon">🎩</span>
+          <div className="header-logo-text">
+            <span className="header-logo-title">MAFIA</span>
+            <span className="header-logo-subtitle">ONLINE</span>
           </div>
         </Link>
 
-        <nav
-          style={{
-            display: "flex",
-            gap: "32px"
-          }}
-        >
-          <Link to="/dashboard">
-            Головна
-          </Link>
+        {/* Breadcrumbs по центру */}
+        <div className="header-breadcrumbs">
+          <Breadcrumbs />
+        </div>
 
-          <Link to="/rooms">
-            Столи
-          </Link>
-
-          <Link to="/rating">
-            Рейтинг
-          </Link>
-
-          <Link to="/profile">
-            Профіль
-          </Link>
-        </nav>
-
-        <button
-          className="primary-button"
-        >
-          Створити стіл
-        </button>
+        {/* Користувач справа */}
+        <div className="header-actions">
+          {isAuthenticated && user ? (
+            <div className="header-user">
+              <div className="header-user-info">
+                <span className="header-user-name">{user.nickname}</span>
+                <span className="header-user-rating">⭐ {user.rating}</span>
+              </div>
+              <img 
+                src={user.avatarUrl || "/default-avatar.png"} 
+                alt={user.nickname}
+                className="header-user-avatar"
+              />
+              <button onClick={handleLogout} className="header-logout">
+                Вийти
+              </button>
+            </div>
+          ) : (
+            <Link to="/login" className="primary-button">
+              Увійти
+            </Link>
+          )}
+        </div>
       </div>
     </header>
   );

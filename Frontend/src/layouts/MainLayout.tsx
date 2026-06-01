@@ -1,30 +1,28 @@
-import type {
-  ReactNode
-} from "react";
-
+import type { ReactNode } from "react";
 import Header from "../components/navigation/Header";
+import Sidebar from "../components/navigation/Sidebar";
 
 type Props = {
   children: ReactNode;
 };
 
-export default function MainLayout({
-  children
-}: Props) {
+export default function MainLayout({ children }: Props) {
   return (
-    <>
+    <div className="main-layout">
       <Header />
-
-      <main
-        style={{
-          minHeight:
-            "calc(100vh - 80px)"
-        }}
-      >
+      <div className="layout-body">
+        <Sidebar />
+        <main className="main-content">
+          <div className="page-container">
+            {children}
+          </div>
+        </main>
+      </div>
+      <footer className="main-footer">
         <div className="page-container">
-          {children}
+          <p>© 2024 Mafia Online. Усі права захищені.</p>
         </div>
-      </main>
-    </>
+      </footer>
+    </div>
   );
 }

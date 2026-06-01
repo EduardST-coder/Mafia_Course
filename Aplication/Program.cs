@@ -70,6 +70,10 @@ builder.Services.AddScoped<LoginHandler>();
 
 builder.Services.AddScoped<GoogleLoginHandler>();
 
+builder.Services.AddScoped<GoogleRedirectHandler>();
+
+builder.Services.AddScoped<GoogleCallbackHandler>();
+
 builder.Services.AddScoped<CreateRoomHandler>();
 
 builder.Services.AddScoped<JoinRoomHandler>();
@@ -192,6 +196,10 @@ app.MapRegisterEndpoint();
 app.MapLoginEndpoint();
 
 app.MapGoogleLoginEndpoint();
+
+app.MapGoogleRedirectEndpoint();
+
+app.MapGoogleCallbackEndpoint();
 
 app.MapCreateRoomEndpoint();
 

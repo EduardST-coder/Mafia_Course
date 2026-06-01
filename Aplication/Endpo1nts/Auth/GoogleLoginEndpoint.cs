@@ -9,7 +9,7 @@ public static class GoogleLoginEndpoint
         this WebApplication app)
     {
         app.MapPost(
-            "/auth/google",
+            "/auth/google-login",  
             async (
                 GoogleLoginRequest request,
                 GoogleLoginHandler handler) =>

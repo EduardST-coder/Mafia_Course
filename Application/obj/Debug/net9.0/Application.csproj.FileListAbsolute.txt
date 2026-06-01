@@ -13,3 +13,4 @@ C:\Users\ПК\source\repos\Mafia_Course\Application\obj\Debug\net9.0\Application
 C:\Users\ПК\source\repos\Mafia_Course\Application\obj\Debug\net9.0\refint\Application.dll
 C:\Users\ПК\source\repos\Mafia_Course\Application\obj\Debug\net9.0\Application.pdb
 C:\Users\ПК\source\repos\Mafia_Course\Application\obj\Debug\net9.0\ref\Application.dll
+C:\Users\ПК\source\repos\Mafia_Course\Application\obj\Debug\net9.0\Application.sourcelink.json

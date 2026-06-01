@@ -1,8 +1,24 @@
 [
   {
+    "ContainingType": "API.Endpoints.Auth.GoogleRedirectEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGoogleRedirectEndpoint\u003Eb__0_0",
+    "RelativePath": "auth/google",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "API.Endpoints.Auth.GoogleLoginEndpoint\u002B\u003C\u003Ec",
     "Method": "\u003CMapGoogleLoginEndpoint\u003Eb__0_0",
-    "RelativePath": "auth/google",
+    "RelativePath": "auth/google-login",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
@@ -10,6 +26,33 @@
       {
         "Name": "request",
         "Type": "Application.DTOs.Auth.GoogleLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Auth.GoogleCallbackEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGoogleCallbackEndpoint\u003Eb__0_0",
+    "RelativePath": "auth/google/callback",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "state",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

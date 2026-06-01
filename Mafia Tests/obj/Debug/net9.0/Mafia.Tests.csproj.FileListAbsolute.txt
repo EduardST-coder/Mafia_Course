@@ -137,3 +137,4 @@ C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\refint\Mafi
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.pdb
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.genruntimeconfig.cache
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\ref\Mafia.Tests.dll
+C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.sourcelink.json

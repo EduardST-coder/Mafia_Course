@@ -1,93 +1,306 @@
-.rooms-page {
-  min-height: 100vh;
-  background: #111;
-  color: white;
-  padding: 40px;
+
+/* === СТОРІНКА ЛОБІ === */
+.room-lobby {
+  height: 100vh;
+  background: #f5f0e8;
+  color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.rooms-title {
-  text-align: center;
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 10px;
+/* === LOBBY HEADER (ПРИХОВАНО) === */
+.lobby-header {
+  display: none;
 }
 
-.rooms-subtitle {
-  text-align: center;
-  opacity: .7;
-  margin-bottom: 40px;
-}
-
-.rooms-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(280px, 1fr)
-    );
-
-  gap: 24px;
-}
-
-.table-card {
-  background: #1c1c1c;
-
-  border: 1px solid #2c2c2c;
-
-  border-radius: 16px;
-
-  padding: 24px;
-
-  transition: .2s;
-}
-
-.table-card:hover {
-  transform: translateY(-4px);
-
-  border-color: #444;
-}
-
-.table-header {
-  font-size: 22px;
-
-  font-weight: 700;
-
-  margin-bottom: 20px;
-}
-
-.table-players {
-  font-size: 32px;
-
-  font-weight: bold;
-
-  margin-bottom: 10px;
-}
-
-.table-status {
-  opacity: .7;
-
-  margin-bottom: 20px;
-}
-
-.table-button {
+/* === СТІЛ (ЦЕНТРАЛЬНИЙ ЛОГО) === */
+.mafia-table {
+  position: relative;
   width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  border: none;
+.table-center-logo {
+  text-align: center;
+  z-index: 1;
+}
 
-  border-radius: 10px;
+.table-center-logo .logo-icon {
+  font-size: clamp(40px, 6vw, 64px);
+  margin-bottom: 8px;
+}
 
-  padding: 12px;
+.table-center-logo .logo-text {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  color: #3a3a3a;
+  letter-spacing: 6px;
+}
 
+.table-center-logo .logo-sub {
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+/* === КАМЕРИ (СВІТЛІ, БЕЗ ТІНЕЙ) === */
+.player-camera {
+  position: absolute;
+  width: 18vw;
+  height: 13.5vw;
+  min-width: 180px;
+  min-height: 135px;
+  max-width: 280px;
+  max-height: 210px;
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #d4c4a8;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.player-camera.occupied {
+  border-color: #a8c4a8;
+}
+
+.player-camera.empty {
+  border-style: dashed;
+  border-color: #c4b49a;
+  background: #f0ebe3;
   cursor: pointer;
+}
 
-  font-size: 16px;
+.seat-number {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 24px;
+  height: 24px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 3;
+}
 
+.camera-avatar {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e0d4;
+}
+
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #c4b49a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+}
+
+.camera-info {
+  padding: 6px 10px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.camera-info .player-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.camera-info .player-role {
+  font-size: 10px;
+  color: #888;
+}
+
+.camera-controls {
+  position: absolute;
+  bottom: 35px;
+  right: 6px;
+  display: flex;
+  gap: 3px;
+}
+
+.mic-icon, .signal-icon {
+  width: 18px;
+  height: 18px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #4ade80;
+}
+
+/* === ПОРЯДОК МІСЦЬ (РІВНОМІРНО ПО ЕКРАНУ) === */
+/* Верх (3 камери: 10, 1, 2) — рівномірно по ширині */
+.pos-10 { top: 60px; left: 16.67%; transform: translateX(-50%); }
+.pos-1  { top: 60px; left: 50%; transform: translateX(-50%); }
+.pos-2  { top: 60px; left: 83.33%; transform: translateX(-50%); }
+
+/* Ліво (3 камери: 9, 8, 7) — рівномірно по висоті */
+.pos-9  { top: 25%; left: 2%; transform: translateY(-50%); }
+.pos-8  { top: 50%; left: 2%; transform: translateY(-50%); }
+.pos-7  { top: 75%; left: 2%; transform: translateY(-50%); }
+
+/* Право (3 камери: 3, 4, 5) — рівномірно по висоті */
+.pos-3  { top: 25%; right: 2%; transform: translateY(-50%); }
+.pos-4  { top: 50%; right: 2%; transform: translateY(-50%); }
+.pos-5  { top: 75%; right: 2%; transform: translateY(-50%); }
+
+/* Низ (1 камера: 6) — по центру */
+.pos-6  { bottom: 80px; left: 50%; transform: translateX(-50%); }
+/* === НИЖНЯ ПАНЕЛЬ === */
+.bottom-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #e0d8cc;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.06);
+  z-index: 100;
+  gap: 10px;
+}
+
+.leave-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.leave-btn:hover {
+  background: #c0392b;
+}
+
+.host-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.host-name {
+  color: #2c7be5;
   font-weight: 600;
 }
 
-.table-button:disabled {
-  cursor: not-allowed;
+.panel-controls {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  opacity: .5;
+.panel-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #555;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.panel-btn:hover {
+  background: #f5f0e8;
+}
+
+.panel-btn.active {
+  background: #2ecc71;
+  color: #fff;
+  border-color: #2ecc71;
+}
+
+.players-count {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* === ЗАВАНТАЖЕННЯ === */
+.page-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 16px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0d8cc;
+  border-top-color: #c4b49a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* === МОБІЛЬНІ === */
+@media (max-width: 768px) {
+  .player-camera {
+    width: 30vw;
+    height: 22.5vw;
+    min-width: 120px;
+    min-height: 90px;
+  }
+  
+  .avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .panel-controls {
+    gap: 4px;
+  }
+  
+  .panel-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
 }

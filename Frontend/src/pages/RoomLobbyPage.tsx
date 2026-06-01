@@ -1,19 +1,28 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { getRoomPlayers, chooseSeat } from "../services/roomService";
+import { useGameHub } from "../hooks/useGameHub";
 import type { RoomPlayer } from "../types/RoomPlayer";
-import HostInfo from "../components/room/HostInfo";
+import "../styles/rooms.css";
 
 export default function RoomLobbyPage() {
   const { roomId } = useParams();
+  const navigate = useNavigate();
   const [players, setPlayers] = useState<RoomPlayer[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isHost, setIsHost] = useState(false);
+
+  const { connected, phase, ready } = useGameHub(roomId || '');
 
   const loadPlayers = async (currentRoomId: string) => {
     try {
       setLoading(true);
       const result = await getRoomPlayers(currentRoomId);
       setPlayers(result);
+      const me = result.find((p: RoomPlayer) => p.isOwner);
+      if (me) {
+        setIsHost(true);
+      }
     } catch (error) {
       console.error(error);
     } finally {
@@ -23,7 +32,6 @@ export default function RoomLobbyPage() {
 
   const handleChooseSeat = async (seatNumber: number) => {
     if (!roomId) return;
-
     try {
       await chooseSeat(roomId, seatNumber);
       await loadPlayers(roomId);
@@ -33,40 +41,64 @@ export default function RoomLobbyPage() {
     }
   };
 
+  const handleStartGame = () => {
+    ready();
+  };
+
+  const handleLeave = () => {
+    navigate('/');
+  };
+
   useEffect(() => {
     if (!roomId) return;
     loadPlayers(roomId);
   }, [roomId]);
 
-  const renderSeat = (seatNumber: number) => {
-    const player = players.find((x) => x.seatNumber === seatNumber);
+  useEffect(() => {
+    if (phase !== 'waiting' && phase !== 'ended' && roomId) {
+      navigate(`/game/${roomId}`);
+    }
+  }, [phase, roomId, navigate]);
+
+  const getPlayerBySeat = (seatNumber: number) => {
+    return players.find((p) => p.seatNumber === seatNumber);
+  };
+
+  const renderCamera = (seatNumber: number) => {
+    const player = getPlayerBySeat(seatNumber);
 
     if (player) {
       return (
-        <div className="seat-card occupied">
-          <div className="seat-badge">№{seatNumber}</div>
-          <div className="seat-avatar">
+        <div className={`player-camera occupied pos-${seatNumber}`}>
+          <div className="seat-number">{seatNumber}</div>
+          <div className="camera-avatar">
             <div className="avatar-placeholder">
               {player.nickname.charAt(0).toUpperCase()}
             </div>
           </div>
-          <div className="seat-info">
-            <div className="seat-name">{player.nickname}</div>
-            <div className="seat-status">{player.isOwner ? "Ведучий" : "Гравець"}</div>
+          <div className="camera-info">
+            <span className="player-name">{player.nickname}</span>
+            {player.isOwner && <span className="player-role">Ведучий</span>}
+          </div>
+          <div className="camera-controls">
+            <span className="mic-icon">🎤</span>
+            <span className="signal-icon">📶</span>
           </div>
         </div>
       );
     }
 
     return (
-      <div className="seat-card empty" onClick={() => handleChooseSeat(seatNumber)}>
-        <div className="seat-badge">№{seatNumber}</div>
-        <div className="seat-avatar empty-avatar">
-          <span>+</span>
+      <div 
+        className={`player-camera empty pos-${seatNumber}`}
+        onClick={() => handleChooseSeat(seatNumber)}
+      >
+        <div className="seat-number">{seatNumber}</div>
+        <div className="camera-avatar">
+          <div className="avatar-placeholder">+</div>
         </div>
-        <div className="seat-info">
-          <div className="seat-name">Вільне місце</div>
-          <div className="seat-status click-hint">Натисніть щоб сісти</div>
+        <div className="camera-info">
+          <span className="player-name">Вільне місце</span>
         </div>
       </div>
     );
@@ -83,32 +115,60 @@ export default function RoomLobbyPage() {
 
   return (
     <div className="room-lobby">
-      <div className="table-row top">
-        <div className="seat-wrapper">{renderSeat(10)}</div>
-        <div className="table-center">
-          <div className="table-logo">🎩</div>
-          <div className="table-name">MAFIA TABLE</div>
+      <div className="lobby-header">
+        <h2>Кімната: Mafia Room</h2>
+        <div className="connection-status">
+          {connected ? '🟢 Лобі' : '🔴 Підключення...'}
+          <span>ID: {roomId?.slice(0, 8)}</span>
         </div>
-        <div className="seat-wrapper">{renderSeat(1)}</div>
-        <div className="seat-wrapper">{renderSeat(2)}</div>
       </div>
 
-      <div className="table-row middle">
-        <div className="seat-wrapper">{renderSeat(9)}</div>
-        <div className="table-middle-space"></div>
-        <div className="seat-wrapper">{renderSeat(3)}</div>
+      <div className="mafia-table">
+        {renderCamera(10)}
+        {renderCamera(1)}
+        {renderCamera(2)}
+        {renderCamera(3)}
+        {renderCamera(4)}
+        {renderCamera(5)}
+        {renderCamera(6)}
+        {renderCamera(7)}
+        {renderCamera(8)}
+        {renderCamera(9)}
+
+        <div className="table-center-logo">
+          <div className="logo-icon">🎩</div>
+          <div className="logo-text">MAFIA</div>
+          <div className="logo-sub">ONLINE</div>
+        </div>
       </div>
 
-      <div className="table-row bottom">
-        <div className="seat-wrapper">{renderSeat(8)}</div>
-        <div className="seat-wrapper">{renderSeat(7)}</div>
-        <div className="seat-wrapper">{renderSeat(6)}</div>
-        <div className="seat-wrapper">{renderSeat(5)}</div>
-        <div className="seat-wrapper">{renderSeat(4)}</div>
+      <div className="lobby-actions">
+        {isHost && (
+          <button onClick={handleStartGame} className="action-btn start">
+            🚀 Почати гру
+          </button>
+        )}
+        <button onClick={handleLeave} className="action-btn leave">
+          Вийти
+        </button>
       </div>
 
-      <div className="host-section">
-        <HostInfo hostName="Andrew" />
+            <div className="bottom-panel">
+        <button onClick={handleLeave} className="leave-btn">
+          ← Вийти
+        </button>
+        <div className="host-info">
+          🎤 Ведучий: <span className="host-name">Andrew</span>
+        </div>
+        <div className="panel-controls">
+          <button className="panel-btn active">🎤 Мікрофон</button>
+          <button className="panel-btn">📹 Камера</button>
+          <button className="panel-btn">💬 Чат</button>
+          <button className="panel-btn">👥 Гравці</button>
+        </div>
+        <div className="players-count">
+          👥 {players.length} / 10
+        </div>
       </div>
     </div>
   );

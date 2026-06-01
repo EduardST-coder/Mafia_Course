@@ -14,7 +14,7 @@ using Application.Features.Rooms;
 using Application.Features.Users;
 using Application.Interfaces;
 
-using Infrastructure.Auth;
+using API.Auth;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -150,7 +150,8 @@ builder.Services.AddCors(options =>
         {
             policy
                 .WithOrigins(
-                    "http://localhost:5173")
+                    "http://localhost:5173",
+                    "https://localhost:5173")
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowCredentials();
@@ -239,7 +240,11 @@ app.MapGetRoleEndpoint();
 
 app.MapGetRoomPlayersEndpoint();
 
+// SignalR Hubs
 app.MapHub<GameHub>(
     "/hubs/game");
+
+app.MapHub<WebRTCHub>(
+    "/hubs/webrtc");
 
 app.Run();

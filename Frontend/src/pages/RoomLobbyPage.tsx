@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getRoomPlayers, chooseSeat } from "../services/roomService";
 import { useGameHub } from "../hooks/useGameHub";
+import { useWebRTC } from "../hooks/useWebRTC";
 import type { RoomPlayer } from "../types/RoomPlayer";
 import "../styles/rooms.css";
 
@@ -13,6 +14,29 @@ export default function RoomLobbyPage() {
   const [isHost, setIsHost] = useState(false);
 
   const { connected, phase, ready } = useGameHub(roomId || '');
+  const { localStream, isCameraOn, isMicOn, toggleCamera, toggleMic } = useWebRTC(roomId || '');
+
+  // Ref для локального відео
+  const localVideoRef = useRef<HTMLVideoElement>(null);
+
+  // Приховуємо навбар при вході в кімнату
+  useEffect(() => {
+    document.body.classList.add('hide-navbar');
+    return () => {
+      document.body.classList.remove('hide-navbar');
+    };
+  }, []);
+
+  // Підключаємо локальне відео до video елемента
+  useEffect(() => {
+    console.log('localStream changed:', localStream);
+    if (localVideoRef.current && localStream) {
+      localVideoRef.current.srcObject = localStream;
+      localVideoRef.current.play().catch(err => {
+        console.error('Помилка відтворення відео:', err);
+      });
+    }
+  }, [localStream]);
 
   const loadPlayers = async (currentRoomId: string) => {
     try {
@@ -68,21 +92,40 @@ export default function RoomLobbyPage() {
     const player = getPlayerBySeat(seatNumber);
 
     if (player) {
+      const isLocalPlayer = seatNumber === 1; // TODO: замінити на реальну перевірку
+
       return (
         <div className={`player-camera occupied pos-${seatNumber}`}>
           <div className="seat-number">{seatNumber}</div>
-          <div className="camera-avatar">
-            <div className="avatar-placeholder">
-              {player.nickname.charAt(0).toUpperCase()}
-            </div>
+          
+          {/* Відео-потік або аватар */}
+          <div className="camera-video">
+            {isLocalPlayer && localStream ? (
+              <video
+                ref={localVideoRef}
+                autoPlay
+                muted
+                playsInline
+                className="video-stream"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            ) : (
+              <div className="camera-avatar">
+                <div className="avatar-placeholder">
+                  {player.nickname.charAt(0).toUpperCase()}
+                </div>
+              </div>
+            )}
           </div>
+
           <div className="camera-info">
             <span className="player-name">{player.nickname}</span>
             {player.isOwner && <span className="player-role">Ведучий</span>}
           </div>
+          
           <div className="camera-controls">
-            <span className="mic-icon">🎤</span>
-            <span className="signal-icon">📶</span>
+            <span className={`mic-icon ${isMicOn ? 'on' : 'off'}`}>🎤</span>
+            <span className={`camera-icon ${isCameraOn ? 'on' : 'off'}`}>📹</span>
           </div>
         </div>
       );
@@ -121,39 +164,51 @@ export default function RoomLobbyPage() {
           {connected ? '🟢 Лобі' : '🔴 Підключення...'}
           <span>ID: {roomId?.slice(0, 8)}</span>
         </div>
-      </div>
-
-      <div className="mafia-table">
-        {renderCamera(10)}
-        {renderCamera(1)}
-        {renderCamera(2)}
-        {renderCamera(3)}
-        {renderCamera(4)}
-        {renderCamera(5)}
-        {renderCamera(6)}
-        {renderCamera(7)}
-        {renderCamera(8)}
-        {renderCamera(9)}
-
-        <div className="table-center-logo">
-          <div className="logo-icon">🎩</div>
-          <div className="logo-text">MAFIA</div>
-          <div className="logo-sub">ONLINE</div>
-        </div>
-      </div>
-
-      <div className="lobby-actions">
         {isHost && (
           <button onClick={handleStartGame} className="action-btn start">
             🚀 Почати гру
           </button>
         )}
-        <button onClick={handleLeave} className="action-btn leave">
-          Вийти
-        </button>
       </div>
 
-            <div className="bottom-panel">
+      <div className="table-container">
+        {/* Верхній ряд: 10, 1, 2 */}
+        <div className="table-top">
+          {renderCamera(10)}
+          {renderCamera(1)}
+          {renderCamera(2)}
+        </div>
+
+        {/* Середній ряд: ліво (9,8) + центр (логотип) + право (3,4) */}
+        <div className="table-middle">
+          <div className="table-left">
+            {renderCamera(9)}
+            {renderCamera(8)}
+          </div>
+
+          <div className="table-center">
+            <div className="table-center-logo">
+              <div className="logo-icon">🎩</div>
+              <div className="logo-text">MAFIA</div>
+              <div className="logo-sub">ONLINE</div>
+            </div>
+          </div>
+
+          <div className="table-right">
+            {renderCamera(3)}
+            {renderCamera(4)}
+          </div>
+        </div>
+
+        {/* Нижній ряд: 7, 6, 5 */}
+        <div className="table-bottom">
+          {renderCamera(7)}
+          {renderCamera(6)}
+          {renderCamera(5)}
+        </div>
+      </div>
+
+      <div className="bottom-panel">
         <button onClick={handleLeave} className="leave-btn">
           ← Вийти
         </button>
@@ -161,10 +216,18 @@ export default function RoomLobbyPage() {
           🎤 Ведучий: <span className="host-name">Andrew</span>
         </div>
         <div className="panel-controls">
-          <button className="panel-btn active">🎤 Мікрофон</button>
-          <button className="panel-btn">📹 Камера</button>
-          <button className="panel-btn">💬 Чат</button>
-          <button className="panel-btn">👥 Гравці</button>
+          <button 
+            className={`panel-btn ${isMicOn ? 'active' : ''}`}
+            onClick={toggleMic}
+          >
+            {isMicOn ? '🎤' : '🎤❌'} Мікрофон
+          </button>
+          <button 
+            className={`panel-btn ${isCameraOn ? 'active' : ''}`}
+            onClick={toggleCamera}
+          >
+            {isCameraOn ? '📹' : '📹❌'} Камера
+          </button>
         </div>
         <div className="players-count">
           👥 {players.length} / 10

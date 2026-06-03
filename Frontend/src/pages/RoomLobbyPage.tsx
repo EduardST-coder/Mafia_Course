@@ -14,12 +14,14 @@ export default function RoomLobbyPage() {
   const [isHost, setIsHost] = useState(false);
 
   const { connected, phase, ready } = useGameHub(roomId || '');
-  const { localStream, isCameraOn, isMicOn, toggleCamera, toggleMic } = useWebRTC(roomId || '');
+  const { 
+    localStream, 
+    isCameraOn, 
+    isMicOn, 
+    toggleCamera, 
+    toggleMic 
+  } = useWebRTC();
 
-  // Ref для локального відео
-  const localVideoRef = useRef<HTMLVideoElement>(null);
-
-  // Приховуємо навбар при вході в кімнату
   useEffect(() => {
     document.body.classList.add('hide-navbar');
     return () => {
@@ -27,24 +29,12 @@ export default function RoomLobbyPage() {
     };
   }, []);
 
-  // Підключаємо локальне відео до video елемента
-  useEffect(() => {
-    console.log('localStream changed:', localStream);
-    if (localVideoRef.current && localStream) {
-      localVideoRef.current.srcObject = localStream;
-      localVideoRef.current.play().catch(err => {
-        console.error('Помилка відтворення відео:', err);
-      });
-    }
-  }, [localStream]);
-
   const loadPlayers = async (currentRoomId: string) => {
     try {
       setLoading(true);
       const result = await getRoomPlayers(currentRoomId);
       setPlayers(result);
-      const me = result.find((p: RoomPlayer) => p.isOwner);
-      if (me) {
+      if (result.find((p: RoomPlayer) => p.isOwner)) {
         setIsHost(true);
       }
     } catch (error) {
@@ -65,13 +55,8 @@ export default function RoomLobbyPage() {
     }
   };
 
-  const handleStartGame = () => {
-    ready();
-  };
-
-  const handleLeave = () => {
-    navigate('/');
-  };
+  const handleStartGame = () => ready();
+  const handleLeave = () => navigate('/');
 
   useEffect(() => {
     if (!roomId) return;
@@ -90,25 +75,16 @@ export default function RoomLobbyPage() {
 
   const renderCamera = (seatNumber: number) => {
     const player = getPlayerBySeat(seatNumber);
+    const showCamera = localStream !== null;
 
     if (player) {
-      const isLocalPlayer = seatNumber === 1; // TODO: замінити на реальну перевірку
-
       return (
         <div className={`player-camera occupied pos-${seatNumber}`}>
           <div className="seat-number">{seatNumber}</div>
           
-          {/* Відео-потік або аватар */}
           <div className="camera-video">
-            {isLocalPlayer && localStream ? (
-              <video
-                ref={localVideoRef}
-                autoPlay
-                muted
-                playsInline
-                className="video-stream"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
+            {showCamera ? (
+              <VideoPlayer stream={localStream} />
             ) : (
               <div className="camera-avatar">
                 <div className="avatar-placeholder">
@@ -172,20 +148,16 @@ export default function RoomLobbyPage() {
       </div>
 
       <div className="table-container">
-        {/* Верхній ряд: 10, 1, 2 */}
         <div className="table-top">
           {renderCamera(10)}
           {renderCamera(1)}
           {renderCamera(2)}
         </div>
-
-        {/* Середній ряд: ліво (9,8) + центр (логотип) + право (3,4) */}
         <div className="table-middle">
           <div className="table-left">
             {renderCamera(9)}
             {renderCamera(8)}
           </div>
-
           <div className="table-center">
             <div className="table-center-logo">
               <div className="logo-icon">🎩</div>
@@ -193,14 +165,11 @@ export default function RoomLobbyPage() {
               <div className="logo-sub">ONLINE</div>
             </div>
           </div>
-
           <div className="table-right">
             {renderCamera(3)}
             {renderCamera(4)}
           </div>
         </div>
-
-        {/* Нижній ряд: 7, 6, 5 */}
         <div className="table-bottom">
           {renderCamera(7)}
           {renderCamera(6)}
@@ -209,30 +178,64 @@ export default function RoomLobbyPage() {
       </div>
 
       <div className="bottom-panel">
-        <button onClick={handleLeave} className="leave-btn">
-          ← Вийти
-        </button>
-        <div className="host-info">
-          🎤 Ведучий: <span className="host-name">Andrew</span>
-        </div>
+        <button onClick={handleLeave} className="leave-btn">← Вийти</button>
+        <div className="host-info">🎤 Ведучий: <span className="host-name">Andrew</span></div>
         <div className="panel-controls">
+          {/* ✅ Кнопка мікрофона з діагностикою */}
           <button 
-            className={`panel-btn ${isMicOn ? 'active' : ''}`}
-            onClick={toggleMic}
+            className={`panel-btn ${isMicOn ? 'active' : ''}`} 
+            onClick={() => {
+              console.log('🔘 Кнопка мікрофона натиснута! isMicOn до:', isMicOn);
+              toggleMic();
+              console.log('🔘 Після toggleMic isMicOn має змінитися');
+            }}
           >
             {isMicOn ? '🎤' : '🎤❌'} Мікрофон
           </button>
+          
+          {/* ✅ Кнопка камери з діагностикою */}
           <button 
-            className={`panel-btn ${isCameraOn ? 'active' : ''}`}
-            onClick={toggleCamera}
+            className={`panel-btn ${isCameraOn ? 'active' : ''}`} 
+            onClick={() => {
+              console.log('🔘 Кнопка камери натиснута! isCameraOn до:', isCameraOn);
+              toggleCamera();
+            }}
           >
             {isCameraOn ? '📹' : '📹❌'} Камера
           </button>
         </div>
-        <div className="players-count">
-          👥 {players.length} / 10
-        </div>
+        <div className="players-count">👥 {players.length} / 10</div>
       </div>
     </div>
+  );
+}
+
+function VideoPlayer({ stream }: { stream: MediaStream | null }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current && stream) {
+      videoRef.current.srcObject = stream;
+      videoRef.current.play().catch(console.error);
+    }
+  }, [stream]);
+
+  if (!stream) {
+    return (
+      <div className="camera-avatar">
+        <div className="avatar-placeholder">?</div>
+      </div>
+    );
+  }
+
+  return (
+    <video
+      ref={videoRef}
+      autoPlay
+      muted
+      playsInline
+      className="video-stream"
+      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+    />
   );
 }

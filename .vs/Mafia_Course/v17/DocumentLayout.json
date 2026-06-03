@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\habs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\habs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\habs\\webrtchub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\habs\\webrtchub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -169,10 +177,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\application\\interfaces\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C31BEACA-0894-4232-AAC5-BE9B87D17768}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\habs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|solutionrelative:aplication\\habs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D57E313C-DED5-4396-8773-489DD0390DC6}|Aplication\\API.csproj|c:\\users\\\u043F\u043A\\source\\repos\\mafia_course\\aplication\\signalr\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -470,7 +474,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 32,
           "Children": [
             {
               "$type": "Bookmark",
@@ -478,20 +482,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Aplication\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Aplication\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-01T20:59:15.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "WebRTCHub.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Habs\\WebRTCHub.cs",
               "RelativeDocumentMoniker": "Aplication\\Habs\\WebRTCHub.cs",
               "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Habs\\WebRTCHub.cs",
               "RelativeToolTip": "Aplication\\Habs\\WebRTCHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwCAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvz8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T17:49:13.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T17:49:13.601Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "GoogleCallbackEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\GoogleCallbackEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\GoogleCallbackEndpoint.cs",
@@ -503,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "GoogleRedirectEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\GoogleRedirectEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\GoogleRedirectEndpoint.cs",
@@ -515,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "GoogleCallbackHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\GoogleLogin\\GoogleCallbackHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Auth\\GoogleLogin\\GoogleCallbackHandler.cs",
@@ -523,12 +538,11 @@
               "RelativeToolTip": "Application\\Features\\Auth\\GoogleLogin\\GoogleCallbackHandler.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAwF4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T04:51:03.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T04:51:03.688Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "GoogleRedirectHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\GoogleLogin\\GoogleRedirectHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Auth\\GoogleLogin\\GoogleRedirectHandler.cs",
@@ -540,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 115,
               "Title": "20260531155842_AddSeatNumberToRoomPlayer.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260531155842_AddSeatNumberToRoomPlayer.cs",
               "RelativeDocumentMoniker": "Persistence\\Migrations\\20260531155842_AddSeatNumberToRoomPlayer.cs",
@@ -552,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ChooseSeatEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\ChooseSeatEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\ChooseSeatEndpoint.cs",
@@ -564,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "ChooseSeatHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\ChooseSeatHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\ChooseSeatHandler.cs",
@@ -576,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ChooseSeatRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\ChooseSeatRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\ChooseSeatRequest.cs",
@@ -588,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "CheckGameResultHandlerTests.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Rooms\\CheckGameResultHandlerTests.cs",
               "RelativeDocumentMoniker": "Mafia Tests\\Rooms\\CheckGameResultHandlerTests.cs",
@@ -600,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "FinishVotingHandlerTests.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Rooms\\FinishVotingHandlerTests.cs",
               "RelativeDocumentMoniker": "Mafia Tests\\Rooms\\FinishVotingHandlerTests.cs",
@@ -612,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "TestDbContext.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\TestDbContext.cs",
               "RelativeDocumentMoniker": "Mafia Tests\\TestDbContext.cs",
@@ -624,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "CreateVoteHandlerTests.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Rooms\\CreateVoteHandlerTests.cs",
               "RelativeDocumentMoniker": "Mafia Tests\\Rooms\\CreateVoteHandlerTests.cs",
@@ -636,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "GameNotifierMock.cs.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\Mocks\\GameNotifierMock.cs.cs",
               "RelativeDocumentMoniker": "Mafia Tests\\Mocks\\GameNotifierMock.cs.cs",
@@ -648,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 114,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Mafia Tests\\UnitTest1.cs",
               "RelativeDocumentMoniker": "Mafia Tests\\UnitTest1.cs",
@@ -660,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "ConnectionManager.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\SignalR\\ConnectionManager.cs",
               "RelativeDocumentMoniker": "Aplication\\SignalR\\ConnectionManager.cs",
@@ -672,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "IConnectionManager.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IConnectionManager.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IConnectionManager.cs",
@@ -684,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "GoogleLoginEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\GoogleLoginEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\GoogleLoginEndpoint.cs",
@@ -696,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "GoogleLoginHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\GoogleLogin\\GoogleLoginHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Auth\\GoogleLogin\\GoogleLoginHandler.cs",
@@ -708,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "GoogleLoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\GoogleLoginRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Auth\\GoogleLoginRequest.cs",
@@ -720,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 113,
               "Title": "20260527032019_AddVotingSystem.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527032019_AddVotingSystem.cs",
               "RelativeDocumentMoniker": "Persistence\\Migrations\\20260527032019_AddVotingSystem.cs",
@@ -732,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "20260527031527_AddVotingSystem.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527031527_AddVotingSystem.cs",
               "RelativeDocumentMoniker": "Persistence\\Migrations\\20260527031527_AddVotingSystem.cs",
@@ -743,7 +757,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "20260527031257_AddVotingSystem.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260527031257_AddVotingSystem.cs",
               "RelativeDocumentMoniker": "Persistence\\Migrations\\20260527031257_AddVotingSystem.cs",
@@ -754,7 +768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "GetRoleEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetRoleEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\GetRoleEndpoint.cs",
@@ -766,7 +780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "StartGameEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\StartGameEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\StartGameEndpoint.cs",
@@ -778,7 +792,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "LeaveRoomEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\LeaveRoomEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\LeaveRoomEndpoint.cs",
@@ -790,7 +804,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "ClaimsPrincipalExtensions.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Extensions\\ClaimsPrincipalExtensions.cs",
               "RelativeDocumentMoniker": "Aplication\\Extensions\\ClaimsPrincipalExtensions.cs",
@@ -802,7 +816,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "StartGameHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\StartGameHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\StartGameHandler.cs",
@@ -814,7 +828,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "GameNotifier.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\SignalR\\GameNotifier.cs",
               "RelativeDocumentMoniker": "Aplication\\SignalR\\GameNotifier.cs",
@@ -826,7 +840,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "IGameNotifier.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IGameNotifier.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IGameNotifier.cs",
@@ -838,19 +852,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 0,
               "Title": "GameHub.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Habs\\GameHub.cs",
               "RelativeDocumentMoniker": "Aplication\\Habs\\GameHub.cs",
               "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Habs\\GameHub.cs",
               "RelativeToolTip": "Aplication\\Habs\\GameHub.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAmwHcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAswHcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T01:08:16.613Z"
+              "WhenOpened": "2026-05-25T01:08:16.613Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "GetGameStateEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetGameStateEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\GetGameStateEndpoint.cs",
@@ -862,7 +877,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "GetGameStateHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\GetGameStateHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\GetGameStateHandler.cs",
@@ -874,7 +889,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "GamePlayerResponse.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\GamePlayerResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\GamePlayerResponse.cs",
@@ -886,7 +901,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "GameStateResponse.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\GameStateResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\GameStateResponse.cs",
@@ -898,7 +913,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "FinishRevoteEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\FinishRevoteEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\FinishRevoteEndpoint.cs",
@@ -910,7 +925,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "FinishRevoteHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\FinishRevoteHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\FinishRevoteHandler.cs",
@@ -922,7 +937,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "FinishRevoteRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\FinishRevoteRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\FinishRevoteRequest.cs",
@@ -934,7 +949,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "CreateRevoteEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\CreateRevoteEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\CreateRevoteEndpoint.cs",
@@ -946,7 +961,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "CreateRevoteHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\CreateRevoteHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\CreateRevoteHandler.cs",
@@ -958,7 +973,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "CreateRevoteRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateRevoteRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\CreateRevoteRequest.cs",
@@ -970,7 +985,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "FinishVotingEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\FinishVotingEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\FinishVotingEndpoint.cs",
@@ -982,7 +997,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "FinishVotingHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\FinishVotingHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\FinishVotingHandler.cs",
@@ -994,7 +1009,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "FinishVotingResponse.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\FinishVotingResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\FinishVotingResponse.cs",
@@ -1006,7 +1021,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "FinishVotingRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\FinishVotingRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\FinishVotingRequest.cs",
@@ -1018,7 +1033,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "CreateVoteEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\CreateVoteEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\CreateVoteEndpoint.cs",
@@ -1030,7 +1045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "CreateVoteHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\CreateVoteHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\CreateVoteHandler.cs",
@@ -1042,7 +1057,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "CreateVoteRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateVoteRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\CreateVoteRequest.cs",
@@ -1054,7 +1069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "Vote.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\Vote.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Vote.cs",
@@ -1066,7 +1081,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "CheckGameResultEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\CheckGameResultEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\CheckGameResultEndpoint.cs",
@@ -1078,7 +1093,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "CheckGameResultHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\CheckGameResultHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\CheckGameResultHandler.cs",
@@ -1090,7 +1105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "GameResultResponse.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\GameResultResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\GameResultResponse.cs",
@@ -1102,7 +1117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "GameResult.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\GameResult.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\GameResult.cs",
@@ -1114,7 +1129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "DonCheckEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\DonCheckEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\DonCheckEndpoint.cs",
@@ -1126,7 +1141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "DonCheckHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\DonCheckHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\DonCheckHandler.cs",
@@ -1138,7 +1153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "DonCheckResponse.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\DonCheckResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\DonCheckResponse.cs",
@@ -1150,7 +1165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "DonCheckRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\DonCheckRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\DonCheckRequest.cs",
@@ -1162,7 +1177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "SheriffCheckEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\SheriffCheckEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\SheriffCheckEndpoint.cs",
@@ -1174,7 +1189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "SheriffCheckHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\SheriffCheckHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\SheriffCheckHandler.cs",
@@ -1186,7 +1201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "SheriffCheckResponse.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\SheriffCheckResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\SheriffCheckResponse.cs",
@@ -1198,7 +1213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "SheriffCheckRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\SheriffCheckRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\SheriffCheckRequest.cs",
@@ -1210,7 +1225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "MafiaKillEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\MafiaKillEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\MafiaKillEndpoint.cs",
@@ -1222,7 +1237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "MafiaKillHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\MafiaKillHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\MafiaKillHandler.cs",
@@ -1234,7 +1249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "MafiaKillRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\MafiaKillRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\MafiaKillRequest.cs",
@@ -1246,7 +1261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "NextPhaseEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\NextPhaseEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\NextPhaseEndpoint.cs",
@@ -1258,7 +1273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "NextPhaseHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\NextPhaseHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\NextPhaseHandler.cs",
@@ -1270,7 +1285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "NextPhaseRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\NextPhaseRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\NextPhaseRequest.cs",
@@ -1282,7 +1297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "GamePhase.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\GamePhase.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\GamePhase.cs",
@@ -1294,7 +1309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "GetRoomPlayersEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetRoomPlayersEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\GetRoomPlayersEndpoint.cs",
@@ -1306,7 +1321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "GetRoomPlayersHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\GetRoomPlayersHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\GetRoomPlayersHandler.cs",
@@ -1318,7 +1333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "RoomPlayerResponse.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\RoomPlayerResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\RoomPlayerResponse.cs",
@@ -1330,7 +1345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "GetRoomsEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\GetRoomsEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\GetRoomsEndpoint.cs",
@@ -1342,7 +1357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "GetRoomsHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\GetRoomsHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\GetRoomsHandler.cs",
@@ -1354,7 +1369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "RoomListItemDto.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\RoomListItemDto.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\RoomListItemDto.cs",
@@ -1366,7 +1381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "Application.csproj",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Application.csproj",
               "RelativeDocumentMoniker": "Application\\Application.csproj",
@@ -1378,7 +1393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "JoinRoomEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Rooms\\JoinRoomEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Rooms\\JoinRoomEndpoint.cs",
@@ -1390,7 +1405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "JoinRoomHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Rooms\\JoinRoomHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Rooms\\JoinRoomHandler.cs",
@@ -1402,7 +1417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "JoinRoomRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\JoinRoomRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\JoinRoomRequest.cs",
@@ -1414,7 +1429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "20260524073902_UpdateRoomFields.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260524073902_UpdateRoomFields.cs",
               "RelativeDocumentMoniker": "Persistence\\Migrations\\20260524073902_UpdateRoomFields.cs",
@@ -1426,7 +1441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "RoomEndpoints.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\RoomEndpoints.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\RoomEndpoints.cs",
@@ -1438,7 +1453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "IAppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IAppDbContext.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IAppDbContext.cs",
@@ -1450,7 +1465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "CreateRoomHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateRoomHandler.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\CreateRoomHandler.cs",
@@ -1462,7 +1477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "RoomResponse.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\RoomResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\RoomResponse.cs",
@@ -1474,7 +1489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "CreateRoomRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Rooms\\CreateRoomRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Rooms\\CreateRoomRequest.cs",
@@ -1486,7 +1501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "20260520000346_AddRooms.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Migrations\\20260520000346_AddRooms.cs",
               "RelativeDocumentMoniker": "Persistence\\Migrations\\20260520000346_AddRooms.cs",
@@ -1498,7 +1513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "RoomPlayer.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\RoomPlayer.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\RoomPlayer.cs",
@@ -1510,7 +1525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\Room.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Room.cs",
@@ -1522,7 +1537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 95,
               "Title": "RoomStatus.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\RoomStatus.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\RoomStatus.cs",
@@ -1534,7 +1549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "LoginEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\LoginEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\LoginEndpoint.cs",
@@ -1546,7 +1561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 97,
               "Title": "RegisterEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Endpo1nts\\Auth\\RegisterEndpoint.cs",
               "RelativeDocumentMoniker": "Aplication\\Endpo1nts\\Auth\\RegisterEndpoint.cs",
@@ -1558,7 +1573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "LoginHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\Login\\LoginHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Auth\\Login\\LoginHandler.cs",
@@ -1570,7 +1585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "RegisterHandler.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Features\\Auth\\Register\\RegisterHandler.cs",
               "RelativeDocumentMoniker": "Application\\Features\\Auth\\Register\\RegisterHandler.cs",
@@ -1582,7 +1597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 96,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Persistence\\Repositories\\UserRepository.cs",
@@ -1594,7 +1609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "JwtProvider.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Infrastructure\\Auth\\JwtProvider.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Auth\\JwtProvider.cs",
@@ -1602,12 +1617,11 @@
               "RelativeToolTip": "Infrastructure\\Auth\\JwtProvider.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAwCcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T22:58:04.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T22:58:04.417Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 98,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Infrastructure\\Auth\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Auth\\PasswordHasher.cs",
@@ -1615,12 +1629,11 @@
               "RelativeToolTip": "Infrastructure\\Auth\\PasswordHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T22:57:29.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T22:57:29.024Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 99,
               "Title": "IJwtProvider.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IJwtProvider.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IJwtProvider.cs",
@@ -1632,7 +1645,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 100,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IPasswordHasher.cs",
@@ -1644,7 +1657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 101,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IUserRepository.cs",
@@ -1656,7 +1669,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 102,
               "Title": "AuthResponse.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\AuthResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Auth\\AuthResponse.cs",
@@ -1668,7 +1681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 103,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\LoginRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Auth\\LoginRequest.cs",
@@ -1680,7 +1693,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\DTOs\\Auth\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\Auth\\RegisterRequest.cs",
@@ -1692,7 +1705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 104,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Enums\\UserRole.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\UserRole.cs",
@@ -1704,7 +1717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "DbContextFactory.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Context\\DbContextFactory.cs",
               "RelativeDocumentMoniker": "Persistence\\Context\\DbContextFactory.cs",
@@ -1716,7 +1729,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 106,
               "Title": "API.csproj",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\API.csproj",
               "RelativeDocumentMoniker": "Aplication\\API.csproj",
@@ -1728,7 +1741,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 107,
               "Title": "Persistence",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Persistence.csproj",
               "RelativeDocumentMoniker": "Persistence\\Persistence.csproj",
@@ -1739,7 +1752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 108,
               "Title": "Infrastructure",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Infrastructure\\Infrastructure.csproj",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
@@ -1750,7 +1763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 109,
               "Title": "Domain",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Domain.csproj",
               "RelativeDocumentMoniker": "Domain\\Domain.csproj",
@@ -1761,7 +1774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 110,
               "Title": "Application",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Application\\Application.csproj",
               "RelativeDocumentMoniker": "Application\\Application.csproj",
@@ -1772,7 +1785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Program.cs",
               "RelativeDocumentMoniker": "Aplication\\Program.cs",
@@ -1780,12 +1793,11 @@
               "RelativeToolTip": "Aplication\\Program.cs",
               "ViewState": "AgIAAO4AAAAAAAAAAAAuwPkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T23:09:23.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T23:09:23.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 111,
               "Title": "DatabaseExtensions.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\Extensions\\DatabaseExtensions.cs",
               "RelativeDocumentMoniker": "Aplication\\Extensions\\DatabaseExtensions.cs",
@@ -1797,7 +1809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Aplication\\appsettings.json",
               "RelativeDocumentMoniker": "Aplication\\appsettings.json",
@@ -1809,7 +1821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 112,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Configurations\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "Persistence\\Configurations\\UserConfiguration.cs",
@@ -1821,7 +1833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "DbContext.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Persistence\\Context\\DbContext.cs",
               "RelativeDocumentMoniker": "Persistence\\Context\\DbContext.cs",
@@ -1833,7 +1845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
@@ -1845,7 +1857,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 105,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\Mafia_Course\\Domain\\Common\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",

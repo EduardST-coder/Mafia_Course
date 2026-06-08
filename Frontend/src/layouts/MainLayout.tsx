@@ -1,3 +1,4 @@
+// layouts/MainLayout.tsx
 import type { ReactNode } from "react";
 import Header from "../components/navigation/Header";
 import Sidebar from "../components/navigation/Sidebar";

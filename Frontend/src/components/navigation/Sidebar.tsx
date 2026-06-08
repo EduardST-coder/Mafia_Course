@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 
 const menuItems = [
-  { path: "/dashboard", label: "Головна", icon: "🏠" },
-  { path: "/profile", label: "Профіль", icon: "👤" },
+  { path: "/rooms", label: "Головна", icon: "🏠" },
+  { path: "/player", label: "Профіль", icon: "👤" },
 ];
 
 export default function Sidebar() {
@@ -12,7 +12,7 @@ export default function Sidebar() {
     <aside className="sidebar">
       <nav className="sidebar-nav">
         {menuItems.map((item) => {
-          const isActive = location.pathname === item.path;
+          const isActive = location.pathname === item.path || location.pathname.startsWith(item.path + '/');
           return (
             <Link
               key={item.path}

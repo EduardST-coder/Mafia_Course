@@ -1,36 +1,28 @@
 import { useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { parseUserFromToken } from "../utils/jwt";
 
 export default function GoogleCallbackPage() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const { login: authLogin } = useAuth();
+  const { login } = useAuth();
 
   useEffect(() => {
-    const token = searchParams.get("token");
-    const error = searchParams.get("error");
-
-    if (error) {
-      alert("Помилка авторизації через Google");
-      navigate("/login");
+    const token = new URLSearchParams(window.location.search).get("token");
+    if (!token) {
+      navigate("/login", { replace: true });
       return;
     }
 
-    if (token) {
-      localStorage.setItem("token", token);
-      authLogin(token, { id: "", nickname: "Google User", email: "", rating: 1000, role: "Player" });
-      navigate("/dashboard");
-    } else {
-      alert("Не вдалося отримати токен");
-      navigate("/login");
+    const user = parseUserFromToken(token); // ← справжні email + role з токена
+    if (!user) {
+      navigate("/login", { replace: true });
+      return;
     }
-  }, [searchParams, navigate, authLogin]);
 
-  return (
-    <div className="page-loading">
-      <div className="loading-spinner"></div>
-      <p>Завершення авторизації...</p>
-    </div>
-  );
+    login(token, user);
+    navigate("/", { replace: true });
+  }, [navigate, login]);
+
+  return <p style={{ textAlign: "center", marginTop: 40 }}>Входимо...</p>;
 }

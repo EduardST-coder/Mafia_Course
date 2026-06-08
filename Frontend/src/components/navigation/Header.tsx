@@ -1,56 +1,46 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
-import Breadcrumbs from "./Breadcrumbs";
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
 
 export default function Header() {
-  const { user, isAuthenticated, logout } = useAuth();
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    logout();
-    navigate("/login");
-  };
+  const { user, logout } = useContext(AuthContext);
 
   return (
     <header className="header">
-      <div className="page-container header-container">
-        {/* Логотип */}
-        <Link to="/dashboard" className="header-logo">
-          <span className="header-logo-icon">🎩</span>
-          <div className="header-logo-text">
-            <span className="header-logo-title">MAFIA</span>
-            <span className="header-logo-subtitle">ONLINE</span>
-          </div>
+      <Link to="/" className="logo">
+        <span className="logo-icon">🎩</span>
+        <span className="logo-text">MAFIA ONLINE</span>
+      </Link>
+      
+      <nav className="nav-links">
+        <Link to="/" className="nav-link">
+          🏠 Головна
         </Link>
+        <Link to="/profile" className="nav-link">
+          👤 Профіль
+        </Link>
+        
+        {/* Кнопка адміна тільки для адміна */}
+        {user?.role === 'Admin' && (
+          <Link to="/admin" className="nav-link admin-link">
+            🛡️ Адмін
+          </Link>
+        )}
+      </nav>
 
-        {/* Breadcrumbs по центру */}
-        <div className="header-breadcrumbs">
-          <Breadcrumbs />
-        </div>
-
-        {/* Користувач справа */}
-        <div className="header-actions">
-          {isAuthenticated && user ? (
-            <div className="header-user">
-              <div className="header-user-info">
-                <span className="header-user-name">{user.nickname}</span>
-                <span className="header-user-rating">⭐ {user.rating}</span>
-              </div>
-              <img 
-                src={user.avatarUrl || "/default-avatar.png"} 
-                alt={user.nickname}
-                className="header-user-avatar"
-              />
-              <button onClick={handleLogout} className="header-logout">
-                Вийти
-              </button>
-            </div>
-          ) : (
-            <Link to="/login" className="primary-button">
-              Увійти
-            </Link>
-          )}
-        </div>
+      <div className="user-section">
+        {user ? (
+          <>
+            <span className="user-name">{user.nickname}</span>
+            <button onClick={logout} className="btn-logout">
+              Вийти
+            </button>
+          </>
+        ) : (
+          <Link to="/login" className="btn-login">
+            Увійти
+          </Link>
+        )}
       </div>
     </header>
   );

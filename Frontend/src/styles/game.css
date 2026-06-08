@@ -1,0 +1,594 @@
+/* ===== PLAYER / PROFILE PAGE ===== */
+.player-page {
+  padding: 32px 0;
+  min-height: calc(100vh - 80px);
+}
+
+/* ===== HEADER ===== */
+.player-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  margin-bottom: 24px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.player-header-main {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.player-avatar-large {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--gold);
+  box-shadow: var(--shadow-gold);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.player-avatar-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-letter {
+  line-height: 1;
+}
+
+.player-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.player-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.badge-rating {
+  background: linear-gradient(135deg, #f1c40f 0%, #f39c12 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(243, 156, 18, 0.25);
+}
+
+.rating-change {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.rating-change.positive {
+  color: #38a169;
+}
+
+.rating-change.negative {
+  color: #e53e3e;
+}
+
+.player-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge-games {
+  background: rgba(142, 68, 173, 0.1);
+  color: #8e44ad;
+}
+
+.badge-wins {
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+}
+
+.player-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===== TABS ===== */
+.player-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+}
+
+.player-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 15px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  top: 2px;
+}
+
+.player-tab:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+}
+
+.player-tab.active {
+  color: var(--gold);
+  font-weight: 600;
+  border-bottom-color: var(--gold);
+  background: var(--gold-light);
+}
+
+.tab-icon {
+  font-size: 18px;
+}
+
+/* ===== OVERVIEW ===== */
+.tab-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  text-align: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.stat-card.win .stat-value {
+  color: #38a169;
+}
+
+.stat-card.loss .stat-value {
+  color: #e53e3e;
+}
+
+.stat-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Favorite role */
+.favorite-role {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.favorite-role h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.role-big {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.role-icon-big {
+  font-size: 36px;
+}
+
+.role-name-big {
+  font-size: 24px;
+}
+
+/* Recent games */
+.recent-games-preview {
+  padding: 28px;
+}
+
+.recent-games-preview h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+}
+
+.history-row:hover {
+  border-color: var(--gold);
+  background: var(--surface-hover);
+}
+
+.history-date {
+  color: var(--text-secondary);
+  font-weight: 500;
+  min-width: 90px;
+}
+
+.history-role {
+  font-weight: 600;
+  flex: 1;
+}
+
+.history-result {
+  font-weight: 600;
+}
+
+.btn-show-more {
+  margin-top: 12px;
+  background: transparent;
+  border: none;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 0;
+}
+
+.btn-show-more:hover {
+  color: var(--gold-hover);
+  text-decoration: underline;
+}
+
+/* ===== HISTORY TABLE ===== */
+.history-table-wrapper {
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.history-table th {
+  text-align: left;
+  padding: 12px 16px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--border);
+}
+
+.history-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.history-table tr {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.history-table tr:hover td {
+  background: var(--surface-hover);
+}
+
+.history-table tr:last-child td {
+  border-bottom: none;
+}
+
+.role-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--gold-light);
+}
+
+.result-tag {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.history-empty {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* ===== STATS ===== */
+.tab-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stats-card {
+  padding: 28px;
+}
+
+.stats-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.progress-value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.progress-value.win {
+  color: #38a169;
+}
+
+.progress-value.loss {
+  color: #e53e3e;
+}
+
+.progress-bar-bg {
+  height: 12px;
+  background: var(--background);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.8s ease;
+}
+
+.progress-bar-fill.win {
+  background: linear-gradient(90deg, #38a169, #48bb78);
+}
+
+.progress-bar-fill.loss {
+  background: linear-gradient(90deg, #e53e3e, #fc8181);
+}
+
+/* Role stats grid */
+.role-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.role-stat-item {
+  padding: 20px;
+  background: var(--background);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.role-stat-item:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.role-stat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.role-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.role-name {
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+  font-size: 15px;
+}
+
+.role-winrate {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.role-stat-bar-bg {
+  height: 8px;
+  background: var(--surface);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+}
+
+.role-stat-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s ease;
+}
+
+.role-stat-meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ===== ERROR PAGE ===== */
+.page-error {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  padding: 24px;
+}
+
+.page-error p {
+  font-size: 18px;
+  color: var(--text);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .player-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .player-header-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .player-avatar-large {
+    width: 72px;
+    height: 72px;
+    font-size: 30px;
+  }
+
+  .player-name {
+    font-size: 24px;
+  }
+
+  .player-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .player-tab {
+    white-space: nowrap;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .role-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-table {
+    font-size: 14px;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 10px 12px;
+  }
+
+  .history-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

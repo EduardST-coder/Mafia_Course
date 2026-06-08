@@ -1,49 +1,59 @@
+// Frontend/src/hooks/useGameHub.ts
 import { useEffect, useState, useCallback } from 'react';
 import { signalRService } from '../services/signalRService';
-import type { Player, GameMessage } from '../types/Game';
+import type { 
+  RoomPlayer, 
+  ChatMessage, 
+  GamePhase, 
+  MafiaKillResult, 
+  SheriffCheckResult, 
+  DonCheckResult 
+} from '../types';
 
-interface UseGameHubReturn {
-  connected: boolean;
-  messages: GameMessage[];
-  gameState: Record<string, unknown> | null;
-  players: Player[];
-  phase: string;
-  myRole: string;
-  isAlive: boolean;
-  winner: string | null;
-  sendMessage: (text: string) => void;
-  vote: (targetId: string) => void;
-  roleAction: (action: string, targetId: string) => void;
-  ready: () => void;
+interface UseGameHubProps {
+  roomId: string;
 }
 
-export const useGameHub = (roomId: string): UseGameHubReturn => {
+interface GameStatePayload {
+  phase: GamePhase;
+  round: number;
+  timeRemaining: number;
+  currentSpeakerSeat: number | null;
+  nominatedSeats?: number[];
+  revoteNominatedSeats?: number[];
+  lastKilledSeat?: number;
+  mafiaKillResult?: MafiaKillResult;
+  sheriffCheckResult?: SheriffCheckResult;
+  donCheckResult?: DonCheckResult;
+  players: RoomPlayer[];
+  myUserId?: string;
+}
+
+export const useGameHub = ({ roomId }: UseGameHubProps) => {
   const [connected, setConnected] = useState(false);
-  const [messages, setMessages] = useState<GameMessage[]>([]);
-  const [gameState, setGameState] = useState<Record<string, unknown> | null>(null);
-  const [players, setPlayers] = useState<Player[]>([]);
-  const [phase, setPhase] = useState('waiting');
-  const [myRole, setMyRole] = useState('');
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [players, setPlayers] = useState<RoomPlayer[]>([]);
+  const [phase, setPhase] = useState<GamePhase>('Waiting');
+  const [myRole, setMyRole] = useState<string>('');
   const [isAlive, setIsAlive] = useState(true);
   const [winner, setWinner] = useState<string | null>(null);
+  const [timeRemaining, setTimeRemaining] = useState(0);
+  const [currentSpeakerSeat, setCurrentSpeakerSeat] = useState<number | null>(null);
+  const [round, setRound] = useState(0);
+  const [nominatedSeats, setNominatedSeats] = useState<number[]>([]);
+  const [revoteNominatedSeats, setRevoteNominatedSeats] = useState<number[]>([]);
+  const [lastKilledSeat, setLastKilledSeat] = useState<number | undefined>();
+  const [mafiaKillResult, setMafiaKillResult] = useState<MafiaKillResult | null>(null);
+  const [sheriffCheckResult, setSheriffCheckResult] = useState<SheriffCheckResult | null>(null);
+  const [donCheckResult, setDonCheckResult] = useState<DonCheckResult | null>(null);
+  const [myPlayer, setMyPlayer] = useState<RoomPlayer | null>(null);
+  const [isHost, setIsHost] = useState(false);
+  const [mafiaPlayers, setMafiaPlayers] = useState<RoomPlayer[]>([]);
+  const [isMafia, setIsMafia] = useState(false);
+  const [isSheriff, setIsSheriff] = useState(false);
+  const [isDon, setIsDon] = useState(false);
 
   const token = localStorage.getItem('token') || '';
-
-  const sendMessage = useCallback((text: string) => {
-    signalRService.sendMessage(roomId, text);
-  }, [roomId]);
-
-  const vote = useCallback((targetId: string) => {
-    signalRService.vote(roomId, targetId);
-  }, [roomId]);
-
-  const roleAction = useCallback((action: string, targetId: string) => {
-    signalRService.roleAction(roomId, action, targetId);
-  }, [roomId]);
-
-  const ready = useCallback(() => {
-    signalRService.ready(roomId);
-  }, [roomId]);
 
   useEffect(() => {
     const connect = async () => {
@@ -51,44 +61,61 @@ export const useGameHub = (roomId: string): UseGameHubReturn => {
         await signalRService.connect('/hubs/game', token);
         setConnected(true);
 
-        signalRService.on<GameMessage>('ReceiveMessage', (msg) => {
+        signalRService.on('ReceiveMessage', (msg: ChatMessage) => {
           setMessages(prev => [...prev, msg]);
         });
 
-        signalRService.on<Record<string, unknown>>('GameStateUpdated', (state) => {
-          setGameState(state);
-          setPhase(state.phase as string);
-          const statePlayers = state.players as Player[];
+        signalRService.on('GameStateUpdated', (state: GameStatePayload) => {
+          setPhase(state.phase);
+          setRound(state.round);
+          setTimeRemaining(state.timeRemaining);
+          setCurrentSpeakerSeat(state.currentSpeakerSeat);
+          setNominatedSeats(state.nominatedSeats || []);
+          setRevoteNominatedSeats(state.revoteNominatedSeats || []);
+          setLastKilledSeat(state.lastKilledSeat);
+          setMafiaKillResult(state.mafiaKillResult || null);
+          setSheriffCheckResult(state.sheriffCheckResult || null);
+          setDonCheckResult(state.donCheckResult || null);
+          
+          const statePlayers: RoomPlayer[] = state.players || [];
           setPlayers(statePlayers);
-          const me = statePlayers.find(p => p.isMe);
+          
+          const me = statePlayers.find((p: RoomPlayer) => p.userId === state.myUserId);
           if (me) {
-            setMyRole(me.role);
-            setIsAlive(me.isAlive);
+            setMyPlayer(me);
+            setMyRole(me.gameRole || '');
+            setIsAlive(me.status === 'Alive');
+            setIsHost(me.isOwner);
+            setIsMafia(me.gameRole === 'Mafia' || me.gameRole === 'Don');
+            setIsSheriff(me.gameRole === 'Sheriff');
+            setIsDon(me.gameRole === 'Don');
           }
+          
+          setMafiaPlayers(statePlayers.filter((p: RoomPlayer) => p.gameRole === 'Mafia' || p.gameRole === 'Don'));
         });
 
-        signalRService.on<Player>('PlayerJoined', (player) => {
+        signalRService.on('PlayerJoined', (player: RoomPlayer) => {
           setPlayers(prev => [...prev.filter(p => p.id !== player.id), player]);
         });
 
-        signalRService.on<string>('PlayerLeft', (playerId) => {
+        signalRService.on('PlayerLeft', (playerId: string) => {
           setPlayers(prev => prev.filter(p => p.id !== playerId));
         });
 
-        signalRService.on<string>('PhaseChanged', (newPhase) => {
+        signalRService.on('PhaseChanged', (newPhase: GamePhase) => {
           setPhase(newPhase);
         });
 
-        signalRService.on<unknown>('YouDied', () => {
+        signalRService.on('YouDied', () => {
           setIsAlive(false);
         });
 
-        signalRService.on<unknown>('GameStarted', () => {
-          setPhase('night');
+        signalRService.on('GameStarted', () => {
+          setPhase('Night0');
         });
 
-        signalRService.on<string>('GameEnded', (winnerTeam) => {
-          setPhase('ended');
+        signalRService.on('GameEnded', (winnerTeam: string) => {
+          setPhase('Ended');
           setWinner(winnerTeam);
         });
 
@@ -105,18 +132,98 @@ export const useGameHub = (roomId: string): UseGameHubReturn => {
     };
   }, [roomId, token]);
 
+  const sendMessage = useCallback((text: string, isDeadChat = false) => {
+    signalRService.connection?.invoke('SendMessage', roomId, text, isDeadChat);
+  }, [roomId]);
+
+  const vote = useCallback((targetSeat: number) => {
+    signalRService.connection?.invoke('Vote', roomId, targetSeat);
+  }, [roomId]);
+
+  const revote = useCallback((targetSeat: number) => {
+    signalRService.connection?.invoke('Revote', roomId, targetSeat);
+  }, [roomId]);
+
+  const roleAction = useCallback((action: string, targetSeat: number) => {
+    signalRService.connection?.invoke('RoleAction', roomId, action, targetSeat);
+  }, [roomId]);
+
+  const endSpeech = useCallback(() => {
+    signalRService.connection?.invoke('EndSpeech', roomId);
+  }, [roomId]);
+
+  const startGame = useCallback(() => {
+    signalRService.connection?.invoke('StartGame', roomId);
+  }, [roomId]);
+
+  const nextPhase = useCallback(() => {
+    signalRService.connection?.invoke('NextPhase', roomId);
+  }, [roomId]);
+
+  const giveFoul = useCallback((targetSeat: number) => {
+    signalRService.connection?.invoke('GiveFoul', roomId, targetSeat);
+  }, [roomId]);
+
+  const eliminatePlayer = useCallback((targetSeat: number) => {
+    signalRService.connection?.invoke('EliminatePlayer', roomId, targetSeat);
+  }, [roomId]);
+
+  const setSpeaker = useCallback((seat: number) => {
+    signalRService.connection?.invoke('SetSpeaker', roomId, seat);
+  }, [roomId]);
+
+  const nominatePlayer = useCallback((targetSeat: number) => {
+    signalRService.connection?.invoke('NominatePlayer', roomId, targetSeat);
+  }, [roomId]);
+
+  const skipSpeaker = useCallback(() => {
+    signalRService.connection?.invoke('SkipSpeaker', roomId);
+  }, [roomId]);
+
+  const resetVotes = useCallback(() => {
+    signalRService.connection?.invoke('ResetVotes', roomId);
+  }, [roomId]);
+
+  const ready = useCallback(() => {
+    signalRService.connection?.invoke('PlayerReady', roomId);
+  }, [roomId]);
+
   return {
     connected,
     messages,
-    gameState,
     players,
     phase,
     myRole,
     isAlive,
     winner,
+    timeRemaining,
+    currentSpeakerSeat,
+    round,
+    nominatedSeats,
+    revoteNominatedSeats,
+    lastKilledSeat,
+    mafiaKillResult,
+    sheriffCheckResult,
+    donCheckResult,
+    myPlayer,
+    isHost,
+    mafiaPlayers,
+    isMafia,
+    isSheriff,
+    isDon,
     sendMessage,
     vote,
+    revote,
     roleAction,
+    endSpeech,
+    startGame,
+    nextPhase,
+    giveFoul,
+    eliminatePlayer,
+    setSpeaker,
+    nominatePlayer,
+    skipSpeaker,
+    resetVotes,
     ready,
   };
 };

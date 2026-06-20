@@ -1,6 +1,7 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import { apiClient } from '../api/apiClient';
 import '../styles/admin.css';
 
 interface UserItem {
@@ -18,10 +19,11 @@ interface UserItem {
 interface RoomItem {
   id: string;
   name: string;
-  owner: string;
+  ownerNickname: string;
   playersCount: number;
   maxPlayers: number;
-  status: 'Waiting' | 'InProgress' | 'Finished';
+  status: string;
+  isActive: boolean;
   createdAt: string;
 }
 
@@ -42,92 +44,174 @@ interface PlatformStats {
   newToday: number;
 }
 
+interface AdminUserResponse {
+  id: string;
+  nickname: string;
+  email: string;
+  rating: number;
+  role: string;
+  gamesPlayed: number;
+  lastSeenAt: string | null;
+}
+
+interface AdminStatsResponse {
+  totalUsers: number;
+  onlineUsers: number;
+  totalRooms: number;
+  activeRooms: number;
+  gamesPlayedToday: number;
+}
+
+interface AdminRoomResponse {
+  id: string;
+  name: string;
+  ownerNickname: string;
+  playersCount: number;
+  maxPlayers: number;
+  status: string;
+  isActive: boolean;
+  createdAt: string;
+}
+
 export default function AdminPage() {
   const navigate = useNavigate();
   const { user: currentUser } = useContext(AuthContext);
   const [activeTab, setActiveTab] = useState<'users' | 'rooms' | 'reports' | 'stats'>('users');
   const [users, setUsers] = useState<UserItem[]>([]);
   const [rooms, setRooms] = useState<RoomItem[]>([]);
-  const [reports, setReports] = useState<ReportItem[]>([]);
+  const [reports] = useState<ReportItem[]>([]);
   const [stats, setStats] = useState<PlatformStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Перевірка прав доступу
+  // Захист роуту
   useEffect(() => {
     if (!currentUser || currentUser.role !== 'Admin') {
       navigate('/');
     }
   }, [currentUser, navigate]);
 
-  useEffect(() => {
-    // TODO: замінити на реальні API-запити
-    const loadData = async () => {
-      try {
-        setLoading(true);
-        
-        // Mock users
-        setUsers([
-          { id: '1', nickname: 'Player1', email: 'p1@test.com', rating: 1200, role: 'Player', isBanned: false, gamesPlayed: 45, createdAt: '2025-01-15', lastActive: '2025-06-07' },
-          { id: '2', nickname: 'Player2', email: 'p2@test.com', rating: 980, role: 'Player', isBanned: true, gamesPlayed: 12, createdAt: '2025-03-20', lastActive: '2025-05-30' },
-          { id: '3', nickname: 'Mod1', email: 'mod@test.com', rating: 1500, role: 'Moderator', isBanned: false, gamesPlayed: 120, createdAt: '2024-12-01', lastActive: '2025-06-07' },
-          { id: '4', nickname: 'Admin', email: 'admin@test.com', rating: 2000, role: 'Admin', isBanned: false, gamesPlayed: 200, createdAt: '2024-11-01', lastActive: '2025-06-07' },
-        ]);
+  // ✅ Завантаження всіх даних
+  const loadData = useCallback(async () => {
+    setLoading(true);
+    try {
+      const [usersRes, statsRes, roomsRes] = await Promise.all([
+        apiClient.get<AdminUserResponse[]>('/admin/users'),
+        apiClient.get<AdminStatsResponse>('/admin/stats'),
+        apiClient.get<AdminRoomResponse[]>('/admin/rooms')
+      ]);
 
-        // Mock rooms
-        setRooms([
-          { id: 'r1', name: 'Mafia Room #1', owner: 'Player1', playersCount: 8, maxPlayers: 10, status: 'InProgress', createdAt: '2025-06-07 10:00' },
-          { id: 'r2', name: 'Pro Game', owner: 'Mod1', playersCount: 3, maxPlayers: 10, status: 'Waiting', createdAt: '2025-06-07 11:30' },
-          { id: 'r3', name: 'Beginners', owner: 'Player2', playersCount: 10, maxPlayers: 10, status: 'Finished', createdAt: '2025-06-06 20:00' },
-        ]);
+      const mappedUsers: UserItem[] = usersRes.data.map((u) => ({
+        id: u.id,
+        nickname: u.nickname,
+        email: u.email,
+        rating: u.rating,
+        role: u.role as 'Player' | 'Moderator' | 'Admin',
+        isBanned: false,
+        gamesPlayed: u.gamesPlayed || 0,
+        createdAt: u.lastSeenAt ? u.lastSeenAt.split('T')[0] : '—',
+        lastActive: u.lastSeenAt
+          ? new Date(u.lastSeenAt).toLocaleDateString('uk-UA')
+          : 'Ніколи',
+      }));
 
-        // Mock reports
-        setReports([
-          { id: 'rep1', reporter: 'Player1', target: 'Player2', reason: 'Образи в чаті', status: 'Pending', createdAt: '2025-06-07 09:00' },
-          { id: 'rep2', reporter: 'Player3', target: 'Player1', reason: 'Чітерство', status: 'Resolved', createdAt: '2025-06-06 15:00' },
-        ]);
+      setUsers(mappedUsers);
 
-        // Mock stats
-        setStats({
-          totalUsers: 1247,
-          onlineNow: 89,
-          activeGames: 12,
-          totalGames: 15420,
-          newToday: 15,
-        });
-      } catch (err) {
-        console.error('Failed to load admin data:', err);
-      } finally {
-        setLoading(false);
+      const mappedRooms: RoomItem[] = roomsRes.data.map((r) => ({
+        id: r.id,
+        name: r.name,
+        ownerNickname: r.ownerNickname,
+        playersCount: r.playersCount,
+        maxPlayers: r.maxPlayers,
+        status: r.status,
+        isActive: r.isActive,
+        createdAt: new Date(r.createdAt).toLocaleDateString('uk-UA'),
+      }));
+
+      setRooms(mappedRooms);
+
+      setStats({
+        totalUsers: statsRes.data.totalUsers,
+        onlineNow: statsRes.data.onlineUsers,
+        activeGames: statsRes.data.activeRooms,
+        totalGames: 0,
+        newToday: 0,
+      });
+    } catch (err: unknown) {
+      console.error('Admin load error:', err);
+      const error = err as { response?: { status: number } };
+      if (error.response?.status === 403) {
+        alert('Доступ заборонено');
+        navigate('/');
       }
-    };
+    } finally {
+      setLoading(false);
+    }
+  }, [navigate]);
 
-    loadData();
-  }, []);
+  useEffect(() => {
+    if (currentUser?.role === 'Admin') {
+      loadData();
+    }
+  }, [currentUser, loadData]);
 
-  const handleBanUser = (userId: string) => {
-    setUsers(prev => prev.map(u => 
-      u.id === userId ? { ...u, isBanned: !u.isBanned } : u
-    ));
+  // ✅ ЗМІНА РОЛІ
+  const handleChangeRole = async (userId: string, newRole: 'Player' | 'Moderator' | 'Admin') => {
+    if (!window.confirm(`Змінити роль користувача на ${newRole}?`)) return;
+
+    try {
+      await apiClient.put(`/admin/users/${userId}/role`, { role: newRole });
+      setUsers(prev => prev.map(u =>
+        u.id === userId ? { ...u, role: newRole } : u
+      ));
+    } catch (err: unknown) {
+      console.error('Change role error:', err);
+      const error = err as { response?: { data?: { message?: string } } };
+      alert(error.response?.data?.message || 'Помилка при зміні ролі');
+    }
   };
 
-  const handleChangeRole = (userId: string, newRole: 'Player' | 'Moderator' | 'Admin') => {
-    setUsers(prev => prev.map(u => 
-      u.id === userId ? { ...u, role: newRole } : u
-    ));
+  // ✅ ВИДАЛЕННЯ КОРИСТУВАЧА
+  const handleDeleteUser = async (userId: string, nickname: string) => {
+    if (!window.confirm(`ВИДАЛИТИ користувача "${nickname}"? Це незворотна дія!`)) return;
+
+    try {
+      await apiClient.delete(`/admin/users/${userId}`);
+      setUsers(prev => prev.filter(u => u.id !== userId));
+      alert(`Користувача "${nickname}" видалено`);
+    } catch (err: unknown) {
+      console.error('Delete user error:', err);
+      const error = err as { response?: { data?: { message?: string } } };
+      alert(error.response?.data?.message || 'Помилка при видаленні');
+    }
   };
 
-  const handleCloseRoom = (roomId: string) => {
-    setRooms(prev => prev.filter(r => r.id !== roomId));
+  // ✅ ВИДАЛЕННЯ КІМНАТИ
+  const handleDeleteRoom = async (roomId: string, roomName: string) => {
+    if (!window.confirm(`ВИДАЛИТИ кімнату "${roomName}"?`)) return;
+
+    try {
+      await apiClient.delete(`/admin/rooms/${roomId}`);
+      setRooms(prev => prev.filter(r => r.id !== roomId));
+      alert(`Кімнату "${roomName}" видалено`);
+    } catch (err: unknown) {
+      console.error('Delete room error:', err);
+      const error = err as { response?: { data?: { message?: string } } };
+      alert(error.response?.data?.message || 'Помилка при видаленні');
+    }
+  };
+
+  // TODO: бан
+  const handleBanUser = (_userId: string) => {
+    void _userId;
+    alert('Функція бану ще не реалізована на бекенді. Додай IsBanned в User entity.');
   };
 
   const handleResolveReport = (reportId: string, status: 'Resolved' | 'Rejected') => {
-    setReports(prev => prev.map(r => 
-      r.id === reportId ? { ...r, status } : r
-    ));
+    alert(`Скарга ${reportId} позначена як ${status}`);
   };
 
-  const filteredUsers = users.filter(u => 
+  const filteredUsers = users.filter(u =>
     u.nickname.toLowerCase().includes(searchQuery.toLowerCase()) ||
     u.email.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -202,28 +286,28 @@ export default function AdminPage() {
 
         {/* ===== TABS ===== */}
         <div className="admin-tabs">
-          <button 
+          <button
             className={`admin-tab ${activeTab === 'users' ? 'active' : ''}`}
             onClick={() => setActiveTab('users')}
           >
             <span className="tab-icon">👥</span> Користувачі
             <span className="tab-count">{users.length}</span>
           </button>
-          <button 
+          <button
             className={`admin-tab ${activeTab === 'rooms' ? 'active' : ''}`}
             onClick={() => setActiveTab('rooms')}
           >
             <span className="tab-icon">🎮</span> Кімнати
             <span className="tab-count">{rooms.length}</span>
           </button>
-          <button 
+          <button
             className={`admin-tab ${activeTab === 'reports' ? 'active' : ''}`}
             onClick={() => setActiveTab('reports')}
           >
             <span className="tab-icon">⚠️</span> Скарги
             <span className="tab-count">{reports.filter(r => r.status === 'Pending').length}</span>
           </button>
-          <button 
+          <button
             className={`admin-tab ${activeTab === 'stats' ? 'active' : ''}`}
             onClick={() => setActiveTab('stats')}
           >
@@ -244,6 +328,9 @@ export default function AdminPage() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
+                <button className="primary-button" onClick={loadData}>
+                  🔄 Оновити
+                </button>
               </div>
 
               <div className="users-table-wrapper card">
@@ -287,21 +374,21 @@ export default function AdminPage() {
                         </td>
                         <td>
                           <div className="action-buttons">
-                            <button 
+                            <button
                               className="btn-action btn-view"
                               onClick={() => navigate(`/player/${user.id}`)}
                               title="Переглянути профіль"
                             >
                               👁️
                             </button>
-                            <button 
+                            <button
                               className={`btn-action ${user.isBanned ? 'btn-unban' : 'btn-ban'}`}
                               onClick={() => handleBanUser(user.id)}
                               title={user.isBanned ? 'Розбанити' : 'Забанити'}
                             >
                               {user.isBanned ? '🔓' : '🚫'}
                             </button>
-                            <select 
+                            <select
                               className="role-select"
                               value={user.role}
                               onChange={(e) => handleChangeRole(user.id, e.target.value as 'Player' | 'Moderator' | 'Admin')}
@@ -311,6 +398,15 @@ export default function AdminPage() {
                               <option value="Moderator">Moderator</option>
                               <option value="Admin">Admin</option>
                             </select>
+                            {/* ✅ КНОПКА ВИДАЛЕННЯ */}
+                            <button
+                              className="btn-action btn-delete"
+                              onClick={() => handleDeleteUser(user.id, user.nickname)}
+                              title="ВИДАЛИТИ користувача"
+                              style={{ background: '#ef4444', color: 'white' }}
+                            >
+                              🗑️
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -324,7 +420,7 @@ export default function AdminPage() {
             </div>
           )}
 
-          {/* ROOMS TAB */}
+          {/* ROOMS TAB — РЕАЛЬНІ ДАНІ */}
           {activeTab === 'rooms' && (
             <div className="tab-rooms animate-fade-in">
               <div className="rooms-table-wrapper card">
@@ -335,6 +431,7 @@ export default function AdminPage() {
                       <th>Власник</th>
                       <th>Гравці</th>
                       <th>Статус</th>
+                      <th>Активна</th>
                       <th>Створена</th>
                       <th>Дії</th>
                     </tr>
@@ -343,7 +440,7 @@ export default function AdminPage() {
                     {rooms.map(room => (
                       <tr key={room.id}>
                         <td className="room-name">{room.name}</td>
-                        <td>{room.owner}</td>
+                        <td>{room.ownerNickname}</td>
                         <td>{room.playersCount}/{room.maxPlayers}</td>
                         <td>
                           <span className={`room-status ${room.status.toLowerCase()}`}>
@@ -352,22 +449,31 @@ export default function AdminPage() {
                             {room.status === 'Finished' && '✅ Завершена'}
                           </span>
                         </td>
+                        <td>
+                          {room.isActive ? (
+                            <span className="status-badge active">🟢 Так</span>
+                          ) : (
+                            <span className="status-badge banned">⬜ Ні</span>
+                          )}
+                        </td>
                         <td>{room.createdAt}</td>
                         <td>
                           <div className="action-buttons">
-                            <button 
+                            <button
                               className="btn-action btn-view"
                               onClick={() => navigate(`/game/${room.id}`)}
                               title="Спостерігати"
                             >
                               👁️
                             </button>
-                            <button 
-                              className="btn-action btn-ban"
-                              onClick={() => handleCloseRoom(room.id)}
-                              title="Закрити кімнату"
+                            {/* ✅ КНОПКА ВИДАЛЕННЯ КІМНАТИ */}
+                            <button
+                              className="btn-action btn-delete"
+                              onClick={() => handleDeleteRoom(room.id, room.name)}
+                              title="ВИДАЛИТИ кімнату"
+                              style={{ background: '#ef4444', color: 'white' }}
                             >
-                              ✕
+                              🗑️
                             </button>
                           </div>
                         </td>
@@ -417,14 +523,14 @@ export default function AdminPage() {
                           <div className="action-buttons">
                             {report.status === 'Pending' && (
                               <>
-                                <button 
+                                <button
                                   className="btn-action btn-unban"
                                   onClick={() => handleResolveReport(report.id, 'Resolved')}
                                   title="Розглянути"
                                 >
                                   ✓
                                 </button>
-                                <button 
+                                <button
                                   className="btn-action btn-ban"
                                   onClick={() => handleResolveReport(report.id, 'Rejected')}
                                   title="Відхилити"

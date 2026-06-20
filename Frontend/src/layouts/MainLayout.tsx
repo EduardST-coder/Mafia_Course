@@ -1,24 +1,16 @@
-// layouts/MainLayout.tsx
-import type { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../components/navigation/Header";
-import Sidebar from "../components/navigation/Sidebar";
+import "../styles/theme.css";
 
-type Props = {
-  children: ReactNode;
-};
-
-export default function MainLayout({ children }: Props) {
+export default function MainLayout() {
   return (
     <div className="main-layout">
       <Header />
-      <div className="layout-body">
-        <Sidebar />
-        <main className="main-content">
-          <div className="page-container">
-            {children}
-          </div>
-        </main>
-      </div>
+      <main className="main-content">
+        <div className="page-container">
+          <Outlet />
+        </div>
+      </main>
       <footer className="main-footer">
         <div className="page-container">
           <p>© 2024 Mafia Online. Усі права захищені.</p>

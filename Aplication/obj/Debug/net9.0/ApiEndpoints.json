@@ -1,5 +1,124 @@
 [
   {
+    "ContainingType": "API.Endpoints.Admin.GetAdminRoomsEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGetAdminRoomsEndpoint\u003Eb__0_0",
+    "RelativePath": "admin/rooms",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Admin.DeleteRoomEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDeleteRoomEndpoint\u003Eb__0_0",
+    "RelativePath": "admin/rooms/{roomId}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Admin.GetAdminStatsEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGetAdminStatsEndpoint\u003Eb__0_0",
+    "RelativePath": "admin/stats",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Admin.GetAdminUsersEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGetAdminUsersEndpoint\u003Eb__0_0",
+    "RelativePath": "admin/users",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Admin.DeleteUserEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapDeleteUserEndpoint\u003Eb__0_0",
+    "RelativePath": "admin/users/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Admin.ChangeUserRoleEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapChangeUserRoleEndpoint\u003Eb__0_0",
+    "RelativePath": "admin/users/{userId}/role",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "API.Endpoints.Admin.ChangeRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "API.Endpoints.Auth.GoogleRedirectEndpoint\u002B\u003C\u003Ec",
     "Method": "\u003CMapGoogleRedirectEndpoint\u003Eb__0_0",
     "RelativePath": "auth/google",
@@ -109,6 +228,22 @@
     ]
   },
   {
+    "ContainingType": "API.Endpoints.Public.GetHomeStatsEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapGetHomeStatsEndpoint\u003Eb__0_0",
+    "RelativePath": "public/stats",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "API.Endpoints.Rooms.RoomEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapCreateRoomEndpoint\u003Eb__0_0",
     "RelativePath": "rooms",
@@ -138,6 +273,33 @@
     "IsController": false,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Endpoints.Rooms.JoinRoomEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapJoinRoomEndpoint\u003Eb__0_0",
+    "RelativePath": "rooms/{roomId:guid}/join",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Rooms.JoinRoomRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Void",
@@ -267,28 +429,6 @@
       {
         "Name": "request",
         "Type": "Application.DTOs.Rooms.FinishVotingRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "API.Endpoints.Rooms.JoinRoomEndpoint\u002B\u003C\u003Ec",
-    "Method": "\u003CMapJoinRoomEndpoint\u003Eb__0_0",
-    "RelativePath": "rooms/join",
-    "HttpMethod": "POST",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Application.DTOs.Rooms.JoinRoomRequest",
         "IsRequired": true
       }
     ],
@@ -506,6 +646,28 @@
     "IsController": false,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_3",
+    "RelativePath": "users/me",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "UpdateProfileRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Void",

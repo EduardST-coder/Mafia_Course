@@ -131,10 +131,10 @@ C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.AssemblyInfoInputs.cache
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.AssemblyInfo.cs
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.csproj.CoreCompileInputs.cache
+C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.sourcelink.json
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Te.E19387C6.Up2Date
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.dll
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\refint\Mafia.Tests.dll
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.pdb
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.genruntimeconfig.cache
 C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\ref\Mafia.Tests.dll
-C:\Users\ПК\source\repos\Mafia_Course\Mafia Tests\obj\Debug\net9.0\Mafia.Tests.sourcelink.json

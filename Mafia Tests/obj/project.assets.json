@@ -996,6 +996,7 @@
           "MediatR": "11.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.EntityFrameworkCore": "9.0.5",
+          "Microsoft.EntityFrameworkCore.Relational": "9.0.5",
           "Microsoft.Extensions.DependencyInjection": "9.0.5"
         },
         "compile": {

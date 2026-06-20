@@ -11,4 +11,6 @@ public class RoomListItemDto
     public int MaxPlayers { get; set; }
 
     public bool IsPrivate { get; set; }
+
+    public string? HostName { get; set; }
 }

@@ -1,47 +1,41 @@
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { AuthContext } from '../../context/AuthContext';
+import { useState } from 'react';
+import Sidebar from './Sidebar';
 
 export default function Header() {
-  const { user, logout } = useContext(AuthContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="header">
-      <Link to="/" className="logo">
-        <span className="logo-icon">🎩</span>
-        <span className="logo-text">MAFIA ONLINE</span>
-      </Link>
-      
-      <nav className="nav-links">
-        <Link to="/" className="nav-link">
-          🏠 Головна
-        </Link>
-        <Link to="/profile" className="nav-link">
-          👤 Профіль
-        </Link>
-        
-        {/* Кнопка адміна тільки для адміна */}
-        {user?.role === 'Admin' && (
-          <Link to="/admin" className="nav-link admin-link">
-            🛡️ Адмін
-          </Link>
-        )}
-      </nav>
+    <>
+      <header className="header">
+        <div className="header-container">
+          <button 
+            className="burger-button" 
+            onClick={toggleMenu}
+            aria-label="Меню"
+          >
+            <span className={`burger-line ${isMenuOpen ? 'open' : ''}`}></span>
+            <span className={`burger-line ${isMenuOpen ? 'open' : ''}`}></span>
+            <span className={`burger-line ${isMenuOpen ? 'open' : ''}`}></span>
+          </button>
 
-      <div className="user-section">
-        {user ? (
-          <>
-            <span className="user-name">{user.nickname}</span>
-            <button onClick={logout} className="btn-logout">
-              Вийти
-            </button>
-          </>
-        ) : (
-          <Link to="/login" className="btn-login">
-            Увійти
+          <Link to="/" className="header-logo">
+            <span className="header-logo-icon">🎩</span>
+            <div className="header-logo-text">
+              <span className="header-logo-title">MAFIA</span>
+              <span className="header-logo-subtitle">ONLINE</span>
+            </div>
           </Link>
-        )}
-      </div>
-    </header>
+
+          <div style={{ width: 40 }}></div>
+        </div>
+      </header>
+
+      <Sidebar isOpen={isMenuOpen} onClose={closeMenu} />
+      {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
+    </>
   );
 }

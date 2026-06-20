@@ -1,5 +1,5 @@
 // Frontend/src/hooks/useGameHub.ts
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { signalRService } from '../services/signalRService';
 import type { 
   RoomPlayer, 
@@ -54,18 +54,44 @@ export const useGameHub = ({ roomId }: UseGameHubProps) => {
   const [isDon, setIsDon] = useState(false);
 
   const token = localStorage.getItem('token') || '';
+  
+  // Guard від подвійного монтажу Strict Mode
+  const connectingRef = useRef(false);
+  const mountedRef = useRef(true);
 
   useEffect(() => {
+    mountedRef.current = true;
+
     const connect = async () => {
+      // Guard: вже підключаємось або вже підключено
+      if (connectingRef.current) return;
+      if (signalRService.state === 'Connected') {
+        setConnected(true);
+        return;
+      }
+
+      connectingRef.current = true;
+
       try {
         await signalRService.connect('/hubs/game', token);
+        
+        // Перевірка: компонент ще монтований?
+        if (!mountedRef.current) {
+          signalRService.disconnect();
+          return;
+        }
+
         setConnected(true);
 
-        signalRService.on('ReceiveMessage', (msg: ChatMessage) => {
+        // Події — викликаємо через функцію, щоб уникнути stale closure
+        const handleMessage = (msg: ChatMessage) => {
+          if (!mountedRef.current) return;
           setMessages(prev => [...prev, msg]);
-        });
+        };
 
-        signalRService.on('GameStateUpdated', (state: GameStatePayload) => {
+        const handleGameState = (state: GameStatePayload) => {
+          if (!mountedRef.current) return;
+          
           setPhase(state.phase);
           setRound(state.round);
           setTimeRemaining(state.timeRemaining);
@@ -92,45 +118,73 @@ export const useGameHub = ({ roomId }: UseGameHubProps) => {
           }
           
           setMafiaPlayers(statePlayers.filter((p: RoomPlayer) => p.gameRole === 'Mafia' || p.gameRole === 'Don'));
-        });
+        };
 
-        signalRService.on('PlayerJoined', (player: RoomPlayer) => {
+        const handlePlayerJoined = (player: RoomPlayer) => {
+          if (!mountedRef.current) return;
           setPlayers(prev => [...prev.filter(p => p.id !== player.id), player]);
-        });
+        };
 
-        signalRService.on('PlayerLeft', (playerId: string) => {
+        const handlePlayerLeft = (playerId: string) => {
+          if (!mountedRef.current) return;
           setPlayers(prev => prev.filter(p => p.id !== playerId));
-        });
+        };
 
-        signalRService.on('PhaseChanged', (newPhase: GamePhase) => {
+        const handlePhaseChanged = (newPhase: GamePhase) => {
+          if (!mountedRef.current) return;
           setPhase(newPhase);
-        });
+        };
 
-        signalRService.on('YouDied', () => {
+        const handleYouDied = () => {
+          if (!mountedRef.current) return;
           setIsAlive(false);
-        });
+        };
 
-        signalRService.on('GameStarted', () => {
+        const handleGameStarted = () => {
+          if (!mountedRef.current) return;
           setPhase('Night0');
-        });
+        };
 
-        signalRService.on('GameEnded', (winnerTeam: string) => {
+        const handleGameEnded = (winnerTeam: string) => {
+          if (!mountedRef.current) return;
           setPhase('Ended');
           setWinner(winnerTeam);
-        });
+        };
+
+        // Реєструємо обробники
+        signalRService.on('ReceiveMessage', handleMessage);
+        signalRService.on('GameStateUpdated', handleGameState);
+        signalRService.on('PlayerJoined', handlePlayerJoined);
+        signalRService.on('PlayerLeft', handlePlayerLeft);
+        signalRService.on('PhaseChanged', handlePhaseChanged);
+        signalRService.on('YouDied', handleYouDied);
+        signalRService.on('GameStarted', handleGameStarted);
+        signalRService.on('GameEnded', handleGameEnded);
 
         await signalRService.joinRoom(roomId);
       } catch (err) {
-        console.error('SignalR connection failed:', err);
+        if (mountedRef.current) {
+          console.error('SignalR connection failed:', err);
+        }
+      } finally {
+        connectingRef.current = false;
       }
     };
 
     connect();
 
     return () => {
-      signalRService.disconnect();
+      mountedRef.current = false;
+      // НЕ відключаємо SignalR тут — хаб може використовуватись іншими компонентами
+      // Відключення робимо при виході з кімнати
     };
   }, [roomId, token]);
+
+  // Дія для виходу з кімнати — відключає SignalR
+  const disconnect = useCallback(() => {
+    signalRService.disconnect();
+    setConnected(false);
+  }, []);
 
   const sendMessage = useCallback((text: string, isDeadChat = false) => {
     signalRService.connection?.invoke('SendMessage', roomId, text, isDeadChat);
@@ -211,6 +265,7 @@ export const useGameHub = ({ roomId }: UseGameHubProps) => {
     isMafia,
     isSheriff,
     isDon,
+    disconnect,  // ← НОВЕ: для виходу з кімнати
     sendMessage,
     vote,
     revote,

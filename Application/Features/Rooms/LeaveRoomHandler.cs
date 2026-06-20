@@ -4,6 +4,7 @@ using Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Application.Features.Rooms;
 
 public class LeaveRoomHandler

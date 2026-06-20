@@ -1,6 +1,7 @@
 ﻿using Application.DTOs.Rooms;
 using Domain.Entities;
 using Application.Interfaces;
+using Microsoft.EntityFrameworkCore;  
 using System;
 
 namespace Application.Features.Rooms;
@@ -35,6 +36,10 @@ public class CreateRoomHandler
 
         await _context.Rooms.AddAsync(room);
 
+        var owner = await _context.Users
+            .AsNoTracking()
+            .FirstOrDefaultAsync(u => u.Id == ownerId);
+
         await _context.SaveChangesAsync();
 
         return new RoomResponse
@@ -43,7 +48,9 @@ public class CreateRoomHandler
             Name = room.Name,
             PlayersCount = 1,
             MaxPlayers = room.MaxPlayers,
-            IsPrivate = room.IsPrivate
+            IsPrivate = room.IsPrivate,
+            HostId = ownerId,                          
+            HostName = owner?.Nickname ?? "Unknown"    
         };
     }
 }

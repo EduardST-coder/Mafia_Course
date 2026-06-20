@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { login } from "../services/authService";
 import { useAuth } from "../context/AuthContext";
+import type { User } from "../context/AuthContext";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -10,14 +11,23 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Обробка токену з URL після Google OAuth
+  // ✅ ОНОВЛЕНО: Парсимо ВСІ параметри з URL, не хардкодимо "Google User"
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const token = urlParams.get("token");
     
     if (token) {
+      const user: User = {
+        id: urlParams.get("id") || "",
+        nickname: urlParams.get("nickname") || "Гравець",
+        email: urlParams.get("email") || "",
+        avatarUrl: urlParams.get("avatarUrl") || undefined,
+        rating: parseInt(urlParams.get("rating") || "1000"),
+        role: urlParams.get("role") || "Player",
+      };
+
       localStorage.setItem("token", token);
-      authLogin(token, { id: "", nickname: "Google User", email: "", rating: 1000, role: "Player" });
+      authLogin(token, user);
       navigate("/dashboard");
     }
   }, [navigate, authLogin]);

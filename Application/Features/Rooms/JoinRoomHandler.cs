@@ -1,77 +1,53 @@
-﻿using Application.DTOs.Rooms;
-using Application.Interfaces;
-
+﻿using Application.Interfaces;
 using Domain.Entities;
 using Domain.Enums;
-
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Rooms;
+
+public record JoinRoomResult(bool Success, string? Message = null);
 
 public class JoinRoomHandler
 {
     private readonly IAppDbContext _context;
 
-    public JoinRoomHandler(
-        IAppDbContext context)
+    public JoinRoomHandler(IAppDbContext context)
     {
         _context = context;
     }
 
-    public async Task<IResult> Handle(
+    public async Task<JoinRoomResult> Handle(
         Guid userId,
-        JoinRoomRequest request)
+        Guid roomId,
+        string? password,
+        CancellationToken ct = default)
     {
         var room = await _context.Rooms
             .Include(x => x.Players)
-            .FirstOrDefaultAsync(x =>
-                x.Id == request.RoomId);
+            .FirstOrDefaultAsync(x => x.Id == roomId, ct);
 
         if (room is null)
-        {
-            return Results.BadRequest(
-                "Room not found");
-        }
+            return new JoinRoomResult(false, "Room not found");
 
         if (room.Status != RoomStatus.Waiting)
-        {
-            return Results.BadRequest(
-                "Game already started");
-        }
+            return new JoinRoomResult(false, "Game already started");
 
         if (room.Players.Count >= room.MaxPlayers)
-        {
-            return Results.BadRequest(
-                "Room is full");
-        }
+            return new JoinRoomResult(false, "Room is full");
 
-        var alreadyJoined = room.Players
-            .Any(x => x.UserId == userId);
+        if (room.IsPrivate && room.Password != password)
+            return new JoinRoomResult(false, "Invalid password");
 
+        var alreadyJoined = room.Players.Any(x => x.UserId == userId);
         if (alreadyJoined)
         {
-            return Results.BadRequest(
-                "Already joined");
+            return new JoinRoomResult(true, "Already joined");
         }
 
-        if (room.IsPrivate &&
-            room.Password != request.Password)
-        {
-            return Results.BadRequest(
-                "Invalid password");
-        }
+        var roomPlayer = new RoomPlayer(room.Id, userId, false);
+        _context.RoomPlayers.Add(roomPlayer);
+        await _context.SaveChangesAsync(ct);
 
-        var roomPlayer = new RoomPlayer(
-            room.Id,
-            userId,
-            false);
-
-        _context.RoomPlayers.Add(
-            roomPlayer);
-
-        await _context.SaveChangesAsync();
-
-        return Results.Ok();
+        return new JoinRoomResult(true, "Successfully joined");
     }
 }

@@ -15,6 +15,7 @@ import { Timer } from '../components/game/Timer';
 import { RoleReveal } from '../components/game/RoleReveal';
 import { FoulManager } from '../components/game/FoulManager';
 import { SpeakerIndicator } from '../components/game/SpeakerIndicator';
+import { joinRoom } from '../services/roomService';
 
 const PHASE_DISPLAY: Record<GamePhase, string> = {
   Waiting: 'Очікування',
@@ -76,8 +77,27 @@ export default function RoomPage() {
   const [selectedTarget, setSelectedTarget] = useState<number | null>(null);
   const [showRoleReveal, setShowRoleReveal] = useState(false);
 
-  const webrtc = useWebRTC({ roomId: roomId || '', token, userId: user?.id || null });
+  const webrtc = useWebRTC({
+  roomId: roomId || '',
+  token,
+  userId: user?.id || null,
+  isHost,
+});
   const { isCameraOn, isMicOn, toggleCamera, toggleMic } = webrtc;
+  useEffect(() => {
+  const joinCurrentRoom = async () => {
+    if (!roomId) return;
+
+    try {
+      const result = await joinRoom(roomId);
+      console.log("JOIN ROOM SUCCESS:", result);
+    } catch (error) {
+      console.error("JOIN ROOM ERROR:", error);
+    }
+  };
+
+  joinCurrentRoom();
+}, [roomId]);
 
   const isMyTurn = currentSpeakerSeat === myPlayer?.seatNumber;
 
@@ -233,21 +253,40 @@ export default function RoomPage() {
         </button>
       </div>
 
-      {isHost && phase !== 'Waiting' && phase !== 'Ended' && (
-        <HostPanel
-          phase={phase}
-          players={players}
-          currentSpeakerSeat={currentSpeakerSeat}
-          nominatedSeats={nominatedSeats}
-          onGiveFoul={handleGiveFoul}
-          onEliminate={handleEliminate}
-          onSetSpeaker={setSpeaker}
-          onNominate={nominatePlayer}
-          onSkipSpeaker={skipSpeaker}
-          onNextPhase={nextPhase}
-          onResetVotes={resetVotes}
-        />
-      )}
+      {isHost && phase !== 'Ended' && (
+  <HostPanel
+  phase={phase}
+  players={players}
+  currentSpeakerSeat={currentSpeakerSeat}
+  nominatedSeats={nominatedSeats}
+  onGiveFoul={handleGiveFoul}
+  onEliminate={handleEliminate}
+  onSetSpeaker={setSpeaker}
+  onNominate={nominatePlayer}
+  onSkipSpeaker={skipSpeaker}
+  onNextPhase={nextPhase}
+  onResetVotes={resetVotes}
+
+  onChangePhase={(phase) => {
+    console.log('Change phase:', phase);
+  }}
+
+  onChangeRole={(playerId, role) => {
+    console.log(
+      'Change role:',
+      playerId,
+      role
+    );
+  }}
+
+  onToggleAlive={(playerId) => {
+    console.log(
+      'Toggle alive:',
+      playerId
+    );
+  }}
+/>
+)}
 
       <FoulManager players={players} isHost={isHost} onGiveFoul={handleGiveFoul} />
 

@@ -38,73 +38,24 @@ function AdminRoute() {
 export default function AppRouter() {
   return (
     <Routes>
+      {/* Публічні роути БЕЗ sidebar */}
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/auth/google/callback" element={<GoogleCallbackPage />} />
 
-      <Route
-        path="/"
-        element={
-          <MainLayout>
-            <DashboardPage />
-          </MainLayout>
-        }
-      />
+      {/* Роути З sidebar (через MainLayout з Outlet) */}
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/rooms/:roomId" element={<RoomLobbyPage />} />
+        <Route path="/game/:roomId" element={<RoomPage />} />
+        <Route path="/profile" element={<PlayerPage />} />
+        <Route path="/player/:userId" element={<PlayerPage />} />
 
-      <Route
-        path="/dashboard"
-        element={
-          <MainLayout>
-            <DashboardPage />
-          </MainLayout>
-        }
-      />
-
-      <Route
-        path="/rooms/:roomId"
-        element={
-          <MainLayout>
-            <RoomLobbyPage />
-          </MainLayout>
-        }
-      />
-
-      <Route
-        path="/game/:roomId"
-        element={
-          <MainLayout>
-            <RoomPage />
-          </MainLayout>
-        }
-      />
-
-      <Route
-        path="/profile"
-        element={
-          <MainLayout>
-            <PlayerPage />
-          </MainLayout>
-        }
-      />
-
-      <Route
-        path="/player/:userId"
-        element={
-          <MainLayout>
-            <PlayerPage />
-          </MainLayout>
-        }
-      />
-
-      <Route element={<AdminRoute />}>
-        <Route
-          path="/admin"
-          element={
-            <MainLayout>
-              <AdminPage />
-            </MainLayout>
-          }
-        />
+        {/* Адмін роути з захистом */}
+        <Route element={<AdminRoute />}>
+          <Route path="/admin" element={<AdminPage />} />
+        </Route>
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />

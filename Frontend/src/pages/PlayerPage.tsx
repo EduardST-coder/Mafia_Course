@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import type { User } from '../context/AuthContext';
+import { apiClient } from '../api/apiClient';
 import '../styles/game.css';
 
 interface PlayerStats {
@@ -26,6 +27,15 @@ interface GameHistoryItem {
   duration: string;
 }
 
+const getUserFromStorage = (): User | null => {
+  try {
+    const saved = localStorage.getItem('user');
+    return saved ? JSON.parse(saved) : null;
+  } catch {
+    return null;
+  }
+};
+
 export default function PlayerPage() {
   const { userId } = useParams();
   const navigate = useNavigate();
@@ -37,16 +47,22 @@ export default function PlayerPage() {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'overview' | 'history' | 'stats'>('overview');
   
-  // ===== РЕДАГУВАННЯ =====
   const [isEditing, setIsEditing] = useState(false);
   const [editNickname, setEditNickname] = useState('');
   const [editAvatar, setEditAvatar] = useState('');
   const [editPreview, setEditPreview] = useState<string | null>(null);
+  const [saveError, setSaveError] = useState('');
+
+  const isMyProfile = !userId || 
+    userId === currentUser?.id || 
+    userId === currentUser?.nickname ||
+    userId === 'me';
 
   useEffect(() => {
     if (authLoading) return;
     
-    const targetId = userId || currentUser?.id || currentUser?.nickname;
+    const targetUser = currentUser || getUserFromStorage();
+    const targetId = userId || targetUser?.id || targetUser?.nickname;
     
     if (!targetId || targetId === '') {
       navigate('/login');
@@ -56,14 +72,15 @@ export default function PlayerPage() {
     const loadPlayer = async () => {
       try {
         setLoading(true);
+        setSaveError('');
         
         const loadedPlayer: User = {
           id: targetId,
-          nickname: currentUser?.nickname || 'Гравець',
-          email: currentUser?.email || '',
-          rating: currentUser?.rating || 0,
-          role: currentUser?.role || 'User',
-          avatarUrl: currentUser?.avatarUrl,
+          nickname: targetUser?.nickname || 'Гравець',
+          email: targetUser?.email || '',
+          rating: targetUser?.rating || 0,
+          role: targetUser?.role || 'User',
+          avatarUrl: targetUser?.avatarUrl,
         };
 
         const loadedStats: PlayerStats = {
@@ -74,50 +91,60 @@ export default function PlayerPage() {
           favoriteRole: '-',
           totalFouls: 0,
           bestMoveCount: 0,
-          rating: currentUser?.rating || 0,
+          rating: targetUser?.rating || 0,
           ratingChange: 0,
         };
 
-        const loadedHistory: GameHistoryItem[] = [];
-
         setPlayer(loadedPlayer);
         setStats(loadedStats);
-        setHistory(loadedHistory);
+        setHistory([]);
         
-        // Ініціалізуємо поля редагування
-        setEditNickname(loadedPlayer.nickname || '');
-        setEditAvatar(loadedPlayer.avatarUrl || '');
+        if (!isEditing) {
+          setEditNickname(loadedPlayer.nickname || '');
+          setEditAvatar(loadedPlayer.avatarUrl || '');
+        }
       } catch (err) {
         console.error('Failed to load player:', err);
+        setSaveError('Не вдалося завантажити профіль');
       } finally {
         setLoading(false);
       }
     };
 
     loadPlayer();
-  }, [userId, currentUser, authLoading, navigate]);
+  }, [userId, currentUser, authLoading, navigate, isEditing]);
 
-  // ===== ЗБЕРЕГТИ ПРОФІЛЬ =====
   const handleSave = async () => {
     if (!player) return;
     
+    const trimmedNickname = editNickname.trim();
+    
+    if (!trimmedNickname || trimmedNickname.length < 2) {
+      setSaveError('Нікнейм має бути від 2 до 20 символів');
+      return;
+    }
+    if (trimmedNickname.length > 20) {
+      setSaveError('Нікнейм занадто довгий (макс. 20 символів)');
+      return;
+    }
+    
+    setSaveError('');
+    
     try {
-      // TODO: замінити на реальний API-запит
-      // await apiClient.put('/users/me', {
-      //   nickname: editNickname,
-      //   avatarUrl: editAvatar
-      // });
+      await apiClient.put('/users/me', {
+        nickname: trimmedNickname,
+        avatarUrl: editAvatar.trim() || null,
+      });
       
       const updatedPlayer = {
         ...player,
-        nickname: editNickname.trim() || player.nickname,
+        nickname: trimmedNickname,
         avatarUrl: editAvatar.trim() || undefined,
       };
       
       setPlayer(updatedPlayer);
       
-      // Оновлюємо глобальний контекст + localStorage через updateUser
-      if (isMyProfile && updateUser) {
+      if (updateUser) {
         updateUser({
           nickname: updatedPlayer.nickname,
           avatarUrl: updatedPlayer.avatarUrl,
@@ -126,28 +153,37 @@ export default function PlayerPage() {
       
       setIsEditing(false);
       setEditPreview(null);
-    } catch (err) {
+    } catch (err: unknown) {
       console.error('Failed to save profile:', err);
-      alert('Помилка збереження. Спробуйте ще раз.');
+      
+      let serverMessage = 'Помилка збереження. Спробуйте ще раз.';
+      
+      if (err instanceof Error && 'response' in err) {
+        const axiosError = err as { response?: { data?: { errors?: string[]; message?: string } } };
+        serverMessage = axiosError.response?.data?.errors?.[0] 
+          || axiosError.response?.data?.message 
+          || serverMessage;
+      }
+      
+      setSaveError(serverMessage);
     }
   };
 
-  // ===== СКАСУВАТИ РЕДАГУВАННЯ =====
   const handleCancel = () => {
     if (!player) return;
     setEditNickname(player.nickname || '');
     setEditAvatar(player.avatarUrl || '');
     setEditPreview(null);
+    setSaveError('');
     setIsEditing(false);
   };
 
-  // ===== ЗАВАНТАЖИТИ ФОТО =====
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     
     if (file.size > 2 * 1024 * 1024) {
-      alert('Файл занадто великий. Максимум 2MB.');
+      setSaveError('Файл занадто великий. Максимум 2MB.');
       return;
     }
     
@@ -156,6 +192,7 @@ export default function PlayerPage() {
       const result = reader.result as string;
       setEditPreview(result);
       setEditAvatar(result);
+      setSaveError('');
     };
     reader.readAsDataURL(file);
   };
@@ -188,8 +225,6 @@ export default function PlayerPage() {
       </div>
     );
   }
-
-  const isMyProfile = !userId || userId === currentUser?.id;
 
   const getRoleIcon = (role: string) => {
     switch (role) {
@@ -225,10 +260,8 @@ export default function PlayerPage() {
   return (
     <div className="player-page">
       <div className="page-container">
-        {/* ===== HEADER ===== */}
         <div className="player-header card">
           <div className="player-header-main">
-            {/* Аватар */}
             <div className="player-avatar-large">
               {isEditing && editPreview ? (
                 <img src={editPreview} alt="Preview" />
@@ -242,7 +275,6 @@ export default function PlayerPage() {
             </div>
             
             <div className="player-header-info">
-              {/* Нік — режим редагування / перегляду */}
               {isEditing ? (
                 <input
                   className="text-input edit-nickname"
@@ -271,7 +303,6 @@ export default function PlayerPage() {
             </div>
           </div>
           
-          {/* Дії */}
           <div className="player-actions">
             {isMyProfile && (
               <>
@@ -306,7 +337,12 @@ export default function PlayerPage() {
           </div>
         </div>
 
-        {/* ===== TABS ===== */}
+        {saveError && (
+          <div className="error-banner" style={{ marginBottom: '1rem', color: '#e53e3e', padding: '0.75rem', background: '#fff5f5', borderRadius: '8px' }}>
+            ⚠️ {saveError}
+          </div>
+        )}
+
         <div className="player-tabs">
           <button 
             className={`player-tab ${activeTab === 'overview' ? 'active' : ''}`}
@@ -328,7 +364,6 @@ export default function PlayerPage() {
           </button>
         </div>
 
-        {/* ===== CONTENT ===== */}
         <div className="player-content">
           {activeTab === 'overview' && (
             <div className="tab-overview animate-fade-in">
@@ -353,16 +388,8 @@ export default function PlayerPage() {
                   <div className="stat-value">{stats?.winRate || 0}%</div>
                   <div className="stat-label">Вінрейт</div>
                 </div>
-                <div className="stat-card card">
-                  <div className="stat-icon">⭐</div>
-                  <div className="stat-value">{stats?.bestMoveCount || 0}</div>
-                  <div className="stat-label">Best Move</div>
-                </div>
-                <div className="stat-card card">
-                  <div className="stat-icon">⚠️</div>
-                  <div className="stat-value">{stats?.totalFouls || 0}</div>
-                  <div className="stat-label">Фолів</div>
-                </div>
+                {/* ❌ ПРИБРАНО: Best Move */}
+                {/* ❌ ПРИБРАНО: Фоли */}
               </div>
 
               {stats?.favoriteRole && stats.favoriteRole !== '-' && (

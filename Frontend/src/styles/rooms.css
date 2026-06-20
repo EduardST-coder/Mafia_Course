@@ -76,6 +76,7 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   padding: 4px 8px;
+  padding-bottom: 80px;
   gap: 4px;
   min-height: 0;
   overflow: hidden;
@@ -99,7 +100,6 @@ html, body, #root {
   gap: 8px;
 }
 
-/* Лівий стовпчик: 2 камери */
 .table-left {
   display: flex;
   flex-direction: column;
@@ -108,7 +108,6 @@ html, body, #root {
   flex-shrink: 0;
 }
 
-/* Центр — логотип */
 .table-center {
   flex: 1;
   display: flex;
@@ -117,7 +116,6 @@ html, body, #root {
   min-width: 0;
 }
 
-/* Правий стовпчик: 2 камери */
 .table-right {
   display: flex;
   flex-direction: column;
@@ -162,7 +160,7 @@ html, body, #root {
   text-transform: uppercase;
 }
 
-/* === КАМЕРА-СЛОТ (ВСІ ОДНАКОВІ ПРЯМОКУТНІ) === */
+/* === КАМЕРА-СЛОТ === */
 .player-camera {
   width: 18vw;
   height: 13vw;
@@ -196,6 +194,37 @@ html, body, #root {
   background: #f0ebe3;
 }
 
+/* === АКТИВНИЙ СПІКЕР === */
+.player-camera.speaking {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+  animation: pulse-speaker 2s infinite;
+}
+
+@keyframes pulse-speaker {
+  0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.5); }
+  50% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.8); }
+}
+
+.speaker-indicator {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #f59e0b;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 20;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
 /* === НОМЕР МІСЦЯ === */
 .seat-number {
   position: absolute;
@@ -212,6 +241,20 @@ html, body, #root {
   font-size: 12px;
   font-weight: 700;
   z-index: 10;
+}
+
+/* === РОЛЬ (бейдж) === */
+.role-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 10;
+  text-transform: uppercase;
 }
 
 /* === ВІДЕО-ПОТІК === */
@@ -232,7 +275,7 @@ html, body, #root {
   object-fit: cover;
 }
 
-/* === АВАТАР (коли немає відео) === */
+/* === АВАТАР === */
 .camera-avatar {
   width: 100%;
   height: 70%;
@@ -275,10 +318,29 @@ html, body, #root {
   color: #2c2c2c;
 }
 
-.camera-info .player-role {
+/* Бейджі статусу */
+.badge {
+  padding: 2px 8px;
+  border-radius: 10px;
   font-size: 9px;
-  color: #c79a4a;
-  font-weight: 600;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge.host {
+  background: #ffd70033;
+  color: #c79a00;
+  border: 1px solid #ffd700;
+}
+
+.badge.ready {
+  background: #2ecc7133;
+  color: #27ae60;
+}
+
+.badge.dead {
+  background: #e74c3c33;
+  color: #c0392b;
 }
 
 /* === КОНТРОЛИ КАМЕРИ/МІКРОФОНА === */
@@ -312,7 +374,7 @@ html, body, #root {
 
 /* === НИЖНЯ ПАНЕЛЬ === */
 .bottom-panel {
-  height: 48px;
+  height: 64px;
   background: #fff;
   border-top: 1px solid #e0d8cc;
   padding: 0 15px;
@@ -322,6 +384,11 @@ html, body, #root {
   box-shadow: 0 -4px 16px rgba(0,0,0,0.06);
   flex-shrink: 0;
   gap: 8px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
 }
 
 .leave-btn {
@@ -396,6 +463,860 @@ html, body, #root {
   color: #666;
   white-space: nowrap;
   font-weight: 600;
+}
+
+/* === ІНДИКАТОР ФАЗИ === */
+.phase-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 300;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.phase-night0,
+.phase-night {
+  background: #1a1a2e;
+  color: #e2e8f0;
+  border-bottom: 2px solid #4a5568;
+}
+
+.phase-day {
+  background: #fffbeb;
+  color: #92400e;
+  border-bottom: 2px solid #f59e0b;
+}
+
+.phase-voting {
+  background: #fef2f2;
+  color: #991b1b;
+  border-bottom: 2px solid #ef4444;
+}
+
+.phase-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.phase-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.phase-timer {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.phase-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.phase-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.phase-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.phase-btn.next-phase {
+  background: #c79a4a;
+  color: #fff;
+  border-color: #c79a4a;
+}
+
+/* === NIGHT0 PHASE === */
+.night0-phase {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 64px;
+  z-index: 250;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.night0-phase.civilian {
+  background: #0f0f1a;
+  color: #666;
+}
+
+.night0-phase.mafia {
+  background: #1a1a2e;
+  color: #e2e8f0;
+}
+
+.night-overlay {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.night-overlay.mafia {
+  filter: drop-shadow(0 0 20px #ef4444);
+}
+
+.mafia-hint {
+  color: #ef4444;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.mafia-team {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-width: 300px;
+}
+
+.mafia-member {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.mafia-icon {
+  font-size: 18px;
+}
+
+.mafia-name {
+  font-weight: 600;
+}
+
+.all-players-hint {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.player-hint {
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.player-hint.is-mafia {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+}
+
+/* === DAY PHASE === */
+.day-phase {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 64px;
+  z-index: 250;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.day-phase.spectator {
+  background: #fef3c7;
+  justify-content: center;
+  text-align: center;
+}
+
+.day-phase h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #b45309;
+}
+
+.speaker-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.current-speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.speaker-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.speaker-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #b45309;
+}
+
+.players-circle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+.circle-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #fef3c7;
+  border: 2px solid #fcd34d;
+  min-width: 80px;
+  position: relative;
+}
+
+.circle-player.speaking {
+  border-color: #f59e0b;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+  animation: pulse-speaker 2s infinite;
+}
+
+.circle-player.me {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.circle-seat {
+  font-size: 12px;
+  font-weight: 700;
+  color: #92400e;
+}
+
+.circle-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.speaking-indicator {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 20px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.my-speech-panel {
+  background: #fff;
+  border: 2px solid #f59e0b;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(245, 158, 11, 0.2);
+}
+
+.speech-hint {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.btn-end-speech {
+  margin-top: 16px;
+  padding: 12px 32px;
+  border-radius: 10px;
+  border: none;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-end-speech:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+}
+
+.waiting-speech {
+  text-align: center;
+  color: #666;
+}
+
+.wait-hint {
+  font-size: 14px;
+  color: #999;
+  margin-top: 8px;
+}
+
+/* === NIGHT PHASE === */
+.night-phase {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 64px;
+  z-index: 250;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.night-phase.civilian {
+  background: #0f0f1a;
+  color: #666;
+  justify-content: center;
+}
+
+.night-phase.mafia,
+.night-phase.don,
+.night-phase.sheriff {
+  background: #1a1a2e;
+  color: #e2e8f0;
+}
+
+.night-phase h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.night-phase h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.sleep-animation {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.sleep-animation span {
+  animation: sleep-float 2s infinite;
+}
+
+.sleep-animation span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.sleep-animation span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes sleep-float {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(-10px); opacity: 1; }
+}
+
+.night-hint {
+  font-size: 14px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.mafia-team-info {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.mafia-partners {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mafia-partner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.mafia-partner.is-don {
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 6px;
+}
+
+.partner-role {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.partner-name {
+  font-size: 14px;
+}
+
+.night-action {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.action-hint {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.victims-grid,
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.victim-card,
+.player-card {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #4a5568;
+  background: rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.victim-card:hover,
+.player-card:hover {
+  border-color: #c79a4a;
+  background: rgba(255,255,255,0.1);
+}
+
+.victim-card.selected,
+.player-card.selected {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.victim-seat,
+.player-seat {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.victim-name,
+.player-name {
+  font-size: 13px;
+}
+
+.victim-check {
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.selected-victims {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.victim-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #ef4444;
+  color: #fff;
+  border-radius: 6px;
+  margin: 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.victim-count {
+  color: #888;
+  margin-left: 8px;
+}
+
+.btn-confirm {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-confirm:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+.btn-confirm:disabled {
+  background: #4a5568;
+  cursor: not-allowed;
+}
+
+.action-result {
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.action-result.success {
+  background: rgba(46, 204, 113, 0.2);
+  border: 1px solid #2ecc71;
+  color: #2ecc71;
+}
+
+.action-result.fail {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+.check-icon {
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.sheriff-found {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.not-sheriff {
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+.red-check {
+  color: #e53e3e;
+  font-weight: 700;
+}
+
+.black-check {
+  color: #1a202c;
+  font-weight: 700;
+}
+
+.check-hint {
+  font-size: 14px;
+  color: #888;
+  margin-top: 8px;
+}
+
+/* === HOST PANEL === */
+.host-panel {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  bottom: 64px;
+  background: #fff;
+  border-left: 2px solid #e0d8cc;
+  z-index: 260;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+}
+
+.host-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0d8cc;
+}
+
+.host-panel-header h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #3a3a3a;
+}
+
+.host-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-host {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #c79a4a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-host:hover {
+  background: #a67c3a;
+}
+
+.btn-host.secondary {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.btn-host.secondary:hover {
+  background: #d0d0d0;
+}
+
+.host-section {
+  margin-bottom: 24px;
+}
+
+.host-section h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.speaker-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 8px;
+  background: #f5f0e8;
+  border-radius: 6px;
+}
+
+.speaker-controls span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.seat-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.seat-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.seat-btn:hover {
+  border-color: #c79a4a;
+  background: #f5f0e8;
+}
+
+.seat-btn.active {
+  background: #f59e0b;
+  color: #fff;
+  border-color: #f59e0b;
+}
+
+.seat-btn.nominated {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+}
+
+.seat-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nomination-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.foul-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.foul-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: #f5f0e8;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.foul-item.warning {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+}
+
+.foul-item.danger {
+  background: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+.foul-count {
+  font-size: 14px;
+}
+
+.foul-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-foul {
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: none;
+  background: #ffc107;
+  color: #333;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-eliminate {
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: none;
+  background: #dc3545;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* === ROLE REVEAL === */
+.role-reveal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  backdrop-filter: blur(8px);
+}
+
+.role-reveal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  border: 4px solid;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.role-card-back {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+.role-icon {
+  font-size: 60px;
+  margin-bottom: 16px;
+}
+
+.role-desc {
+  font-size: 16px;
+  color: #666;
+  margin: 16px 0 24px;
+  line-height: 1.5;
+}
+
+.btn-reveal, .btn-close {
+  padding: 12px 32px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-reveal {
+  background: #c79a4a;
+  color: #fff;
+}
+
+.btn-reveal:hover {
+  background: #a67c3a;
+  transform: translateY(-2px);
+}
+
+.btn-close {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.btn-close:hover {
+  background: #d0d0d0;
 }
 
 /* === КНОПКА ПОЧАТИ ГРУ === */
@@ -478,6 +1399,11 @@ html, body, #root {
 
   .table-container {
     padding: 2px 4px;
+    padding-bottom: 72px;
+  }
+
+  .bottom-panel {
+    height: 56px;
   }
 
   .panel-controls {
@@ -487,5 +1413,40 @@ html, body, #root {
   .panel-btn {
     padding: 4px 8px;
     font-size: 11px;
+  }
+
+  .host-panel {
+    width: 100%;
+    top: auto;
+    bottom: 56px;
+    left: 0;
+    right: 0;
+    height: 200px;
+    border-left: none;
+    border-top: 2px solid #e0d8cc;
+  }
+
+  .phase-banner {
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .night0-phase,
+  .day-phase,
+  .night-phase {
+    top: 36px;
+    bottom: 56px;
+  }
+
+  .role-reveal-card {
+    padding: 24px;
+  }
+
+  .role-card-back {
+    font-size: 60px;
+  }
+
+  .role-icon {
+    font-size: 48px;
   }
 }

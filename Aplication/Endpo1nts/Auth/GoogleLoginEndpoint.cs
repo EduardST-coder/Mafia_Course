@@ -5,17 +5,24 @@ namespace API.Endpoints.Auth;
 
 public static class GoogleLoginEndpoint
 {
-    public static void MapGoogleLoginEndpoint(
-        this WebApplication app)
+    public static void MapGoogleLoginEndpoint(this WebApplication app)
     {
-        app.MapPost(
-            "/auth/google-login",  
-            async (
-                GoogleLoginRequest request,
-                GoogleLoginHandler handler) =>
+        app.MapPost("/auth/google-login", async (
+            GoogleLoginRequest request,
+            GoogleLoginHandler handler) =>
+        {
+            var result = await handler.Handle(request);
+
+            return Results.Ok(new
             {
-                return await handler.Handle(
-                    request);
+                Token = result.Token,
+                UserId = result.User.Id,
+                Nickname = result.User.Nickname,
+                Email = result.User.Email,
+                AvatarUrl = result.User.AvatarUrl,
+                Rating = result.User.Rating,
+                Role = result.User.Role.ToString()
             });
+        });
     }
 }

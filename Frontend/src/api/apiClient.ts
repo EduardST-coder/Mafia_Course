@@ -51,7 +51,7 @@ apiClient.interceptors.response.use(
 );
 
 // ===== SIGNALR CONFIG =====
-export const SIGNALR_URL = "https://localhost:7000/hubs/game"; 
+export const SIGNALR_URL = "https://localhost:7000/hubs/game";
 // ↑ Зміни на твій порт! Якщо Hub на 7001 — постав "https://localhost:7001/hubs/game"
 
 // Перевірка чи SignalR доступний

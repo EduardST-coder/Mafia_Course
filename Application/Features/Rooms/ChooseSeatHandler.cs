@@ -38,6 +38,12 @@ public class ChooseSeatHandler
                 "Player not found in room");
         }
 
+        if (roomPlayer.IsOwner)
+        {
+            return Results.BadRequest(
+                "Host cannot take a seat");
+        }
+
         var seatTaken = await _context.RoomPlayers
             .AnyAsync(x =>
                 x.RoomId == request.RoomId &&

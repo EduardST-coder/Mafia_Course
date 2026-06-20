@@ -165,6 +165,7 @@ C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\API.MvcAppli
 C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\API.RazorAssemblyInfo.cache
 C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\API.RazorAssemblyInfo.cs
+C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\API.sourcelink.json
 C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -245,5 +246,3 @@ C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\refint\API.d
 C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\API.pdb
 C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\API.genruntimeconfig.cache
 C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\ref\API.dll
-C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\API.sourcelink.json
-C:\Users\ПК\source\repos\Mafia_Course\Aplication\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

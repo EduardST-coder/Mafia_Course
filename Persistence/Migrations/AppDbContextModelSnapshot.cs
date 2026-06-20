@@ -32,6 +32,9 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
@@ -83,6 +86,9 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("Fouls")
+                        .HasColumnType("integer");
+
                     b.Property<bool>("IsAlive")
                         .HasColumnType("boolean");
 
@@ -90,6 +96,9 @@ namespace Persistence.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<bool>("IsOwner")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsReady")
                         .HasColumnType("boolean");
 
                     b.Property<int?>("Role")

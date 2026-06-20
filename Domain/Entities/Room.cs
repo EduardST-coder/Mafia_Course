@@ -29,6 +29,8 @@ public class Room : BaseEntity
     { get; private set; }
         = new();
 
+    public bool IsActive { get; private set; } = true;
+
     public ICollection<RoomPlayer> Players
     { get; private set; }
         = new List<RoomPlayer>();
@@ -45,24 +47,19 @@ public class Room : BaseEntity
         string? password)
     {
         Name = name;
-
         OwnerId = ownerId;
-
         MaxPlayers = maxPlayers;
-
         IsPrivate = isPrivate;
-
         Password = password;
+        IsActive = true;
     }
 
     public void StartGame()
     {
         Status = RoomStatus.InProgress;
-
         Phase = GamePhase.Night;
-
         Round = 1;
-
+        IsActive = true;
         MarkUpdated();
     }
 
@@ -75,36 +72,36 @@ public class Room : BaseEntity
         else
         {
             Phase = GamePhase.Night;
-
             Round++;
         }
-
         MarkUpdated();
     }
 
-    public void StartRevote(
-        List<Guid> playerIds)
+    public void StartRevote(List<Guid> playerIds)
     {
         IsRevote = true;
-
         RevotePlayerIds = playerIds;
-
         MarkUpdated();
     }
 
     public void FinishRevote()
     {
         IsRevote = false;
-
         RevotePlayerIds = [];
-
         MarkUpdated();
     }
 
     public void FinishGame()
     {
         Status = RoomStatus.Finished;
+        IsActive = false;
+        MarkUpdated();
+    }
 
+    public void Deactivate()
+    {
+        IsActive = false;
+        Status = RoomStatus.Finished;
         MarkUpdated();
     }
 }

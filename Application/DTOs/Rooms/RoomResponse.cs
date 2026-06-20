@@ -11,4 +11,8 @@ public class RoomResponse
     public int MaxPlayers { get; set; }
 
     public bool IsPrivate { get; set; }
+
+    public Guid? HostId { get; set; }
+
+    public string? HostName { get; set; }
 }

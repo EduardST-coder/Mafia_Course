@@ -9,16 +9,15 @@ namespace API.Auth;
 
 public class JwtProvider : IJwtProvider
 {
-    private const string SecretKey =
-        "SUPER_SECRET_KEY_123456789_123456789";
+    private const string SecretKey = "SUPER_SECRET_KEY_123456789_123456789";
 
     public string Generate(User user)
     {
         var claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new Claim(JwtRegisteredClaimNames.Email, user.Email),
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim(ClaimTypes.Name, user.Nickname),
+            new Claim(ClaimTypes.Email, user.Email),
             new Claim(ClaimTypes.Role, user.Role.ToString())
         };
 
@@ -34,7 +33,6 @@ public class JwtProvider : IJwtProvider
             expires: DateTime.UtcNow.AddDays(7),
             signingCredentials: credentials);
 
-        return new JwtSecurityTokenHandler()
-            .WriteToken(token);
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }

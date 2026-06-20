@@ -1,11 +1,15 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Text.Json;
 
 namespace Application.Features.Auth.GoogleLogin;
+
+public record GoogleCallbackResult(
+    User User,
+    string Token
+);
 
 public class GoogleCallbackHandler
 {
@@ -24,23 +28,23 @@ public class GoogleCallbackHandler
         _jwtProvider = jwtProvider;
         _clientId = configuration["GoogleAuth:ClientId"]!;
         _clientSecret = configuration["GoogleAuth:ClientSecret"]!;
-        _redirectUri = "https://localhost:7000/auth/google/callback"; // ЗМІНЕНО: бекенд, не фронтенд!
+        _redirectUri = "https://localhost:7000/auth/google/callback";
     }
 
-    public async Task<IResult> Handle(string code, string state)
+    public async Task<GoogleCallbackResult> Handle(string code, string state)
     {
         var tokenResponse = await ExchangeCodeForToken(code);
 
         if (tokenResponse == null || string.IsNullOrEmpty(tokenResponse.access_token))
         {
-            return Results.BadRequest(new { Error = "Failed to exchange code for token" });
+            throw new InvalidOperationException("Failed to exchange code for token");
         }
 
         var userInfo = await GetGoogleUserInfo(tokenResponse.access_token);
 
         if (userInfo == null || string.IsNullOrEmpty(userInfo.email))
         {
-            return Results.BadRequest(new { Error = "Failed to get user info" });
+            throw new InvalidOperationException("Failed to get user info");
         }
 
         var user = await _context.Users
@@ -56,12 +60,15 @@ public class GoogleCallbackHandler
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
         }
+        else
+        {
+            user.SetOnline();
+            await _context.SaveChangesAsync();
+        }
 
         var token = _jwtProvider.Generate(user);
 
-        // Редірект на фронтенд з токеном
-        var redirectUrl = $"http://localhost:5173/login?token={token}";
-        return Results.Redirect(redirectUrl);
+        return new GoogleCallbackResult(user, token);
     }
 
     private async Task<GoogleTokenResponse?> ExchangeCodeForToken(string code)
@@ -80,7 +87,7 @@ public class GoogleCallbackHandler
         var response = await httpClient.PostAsync("https://oauth2.googleapis.com/token", content);
         var json = await response.Content.ReadAsStringAsync();
 
-        return JsonSerializer.Deserialize < GoogleTokenResponse > (json);
+        return JsonSerializer.Deserialize<GoogleTokenResponse>(json);
     }
 
     private async Task<GoogleUserInfo?> GetGoogleUserInfo(string accessToken)
@@ -92,7 +99,7 @@ public class GoogleCallbackHandler
         var response = await httpClient.GetAsync("https://www.googleapis.com/oauth2/v2/userinfo");
         var json = await response.Content.ReadAsStringAsync();
 
-        return JsonSerializer.Deserialize < GoogleUserInfo > (json);
+        return JsonSerializer.Deserialize<GoogleUserInfo>(json);
     }
 }
 
